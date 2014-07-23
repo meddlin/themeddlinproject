@@ -1,0 +1,12 @@
+TMP
+/client
+--client facing code, pages
+
+/nmap-scripts
+--premade scripts for nmap, some from the Nmap Scripting Engine (NSE)
+
+/public
+--images, or extra assets the client needs
+
+/server
+--server side code
