@@ -9,8 +9,10 @@ callback-hook@1.0.0
 check@1.0.0
 ctl-helper@1.0.2
 ctl@1.0.0
+d3@1.0.0
 deps@1.0.1
 ejson@1.0.0
+foldor:bootstrap-3@3.2.0-1
 follower-livedata@1.0.0
 geojson-utils@1.0.0
 html-tools@1.0.0
@@ -32,6 +34,8 @@ minifiers@1.0.2
 minimongo@1.0.1
 mizzao:bootstrap-3@3.2.0
 mongo-livedata@1.0.3
+mrt:datatables-bootstrap3@0.1.0
+natestrauser:x-editable-bootstrap@1.5.2
 observe-sequence@1.0.1
 ordered-dict@1.0.0
 random@1.0.0
