@@ -1,3 +1,8 @@
+/* "Pirates ye be warned"
+
+"Take what ya can! Give nothing back!"
+*/
+
 Template.hello.greeting = function () {
   return "Welcome to TMP.";
 };
