@@ -6,11 +6,11 @@
 standard-app-packages
 autopublish
 insecure
-mizzao:bootstrap-3
 iron:router
 meteorhacks:fast-render
 d3
 mrt:datatables-bootstrap3
 jquery
 natestrauser:x-editable-bootstrap
+simison:bootstrap3-less
 
