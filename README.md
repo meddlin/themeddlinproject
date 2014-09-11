@@ -9,4 +9,4 @@ Initially, we will have a reconnaissance/social engineering be focusing on data 
 TMP is still in the initial phases of development. This document will be updated later to instruct on how to download and configure it for first-time use and later deployments. Currently this document will discuss configurations and implementations are already known or actively being developed.
 
 ###Dependencies###
-Currently, TMP must be run on either OSX or a Linux platform. Using Meteor on Windows is currently unofficially supported, so we are currently only developing and testing on the OSX and Linux platforms.
+Currently, TMP must be run on either OSX or a Linux platform. Using Meteor on Windows is currently unofficially supported, although we may develop for Windows later.
