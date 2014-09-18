@@ -1,12 +1,18 @@
 <template name="navigation">
 	<div class="navbar navbar-static-top">
-		<a class="navbar-brand title-color" href="#">TMP</a>
+	<div class="container">
+		<a class="navbar-brand title-color" href="{{pathFor 'home'}}">TMP</a>
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="{{pathFor 'home'}}" class=title-color>Home</a></li>
-			<li><a href="{{pathFor 'about'}}" class=title-color>About</a></li>
 			<li><a href="{{pathFor 'users'}}" class=title-color>Users</a></li>
 			<li><a href="{{pathFor 'login'}}" class=title-color>Login</a></li>
+			<!-- <li class="pull-right">{{> loginButtons}}</li> -->
 		</ul>
+		<div class="nav pull-right">
+			<ul class="nav pull-right">
+				{{>loginButtons}}
+			</ul>
+		</div>
+	</div>
 	</div>
 
 	<div class="container">
