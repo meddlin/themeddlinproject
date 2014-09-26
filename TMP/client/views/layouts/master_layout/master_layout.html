@@ -2,10 +2,11 @@
 	<div class="navbar navbar-static-top">
 		<div class="container">
 			<a class="navbar-brand title-color" href="{{pathFor 'home'}}">TMP</a>
-			<ul class="nav navbar-nav">
-				<li><a href="{{pathFor 'profile'}}" class="title-color">Profile</a></li>
-				<li><a href="{{pathFor 'upload'}}" class="title-color">Upload</a></li>
-			</ul>
+
+			{{#if currentUser}}
+				{{> navigation}}
+			{{/if}}
+
 			<div class="nav pull-right">
 				<ul class="nav pull-right">
 					{{> loginButtons}}
@@ -17,4 +18,11 @@
 	<div class="container">
 		{{> yield}}
 	</div>
+</template>
+
+<template name="navigation">
+	<ul class="nav navbar-nav">
+		<li><a href="{{pathFor 'profile'}}" class="title-color">Profile</a></li>
+		<li><a href="{{pathFor 'upload'}}" class="title-color">Upload</a></li>
+	</ul>
 </template>

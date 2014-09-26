@@ -4,8 +4,6 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-autopublish
-insecure
 iron:router
 meteorhacks:fast-render
 d3
@@ -14,7 +12,7 @@ jquery
 natestrauser:x-editable-bootstrap
 simison:bootstrap3-less
 accounts-password
-alanning:roles
 less
 accounts-ui
+alanning:roles
 
