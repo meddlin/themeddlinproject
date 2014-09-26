@@ -10,8 +10,7 @@ Router.configure({
 });
 
 Router.map(function () {
-  /*
-    Example:
       this.route('home', {path: '/'});
-  */
+      this.route('profile', {path: '/profile'})
+      this.route('upload', {path: '/upload'})
 });
