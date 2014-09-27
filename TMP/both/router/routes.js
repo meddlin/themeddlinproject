@@ -10,15 +10,24 @@ Router.configure({
 });
 
 /* HOOKS */
-Router.onBeforeAction('loading');
+Router.onBeforeAction(
+/*
+	LOADING ANIMATION: go here for a tutorial | https://www.eventedmind.com/classes/how-to/meteor-how-to-use-an-ios7-style-loading-indicator-with-iron-router
+*/
+	function(){
+		NProgress.start();
+		//waiting for data processing goes here, see above URL for instruction
+		NProgress.done();
+	}
+);
 //Router.onAfterAction();
 //Router.onRun();
 //Router.onData();
 //Router.onStop();
 
 Router.map(function () {
-      this.route('home', {path: '/'});
-      this.route('profile', {path: '/profile'});
-      this.route('upload', {path: '/upload'});
-      this.route('admin', {path: '/admin'});
+	this.route('home', {path: '/'});
+	this.route('profile', {path: '/profile'});
+	this.route('upload', {path: '/upload'});
+	this.route('admin', {path: '/admin'});
 });
