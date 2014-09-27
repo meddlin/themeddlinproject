@@ -24,6 +24,8 @@ Template.Loading.helpers({
 /* Loading: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Loading.created = function () {
+  console.log('loading...');
+  Nprogress.start();
 };
 
 Template.Loading.rendered = function () {
