@@ -13,6 +13,5 @@ natestrauser:x-editable-bootstrap
 simison:bootstrap3-less
 accounts-password
 less
-accounts-ui
 alanning:roles
-
+rajit:accounts-ui-bootstrap-3
