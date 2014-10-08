@@ -4,3 +4,5 @@ Meteor.publish( "users", function(){
 Meteor.publish( "roles", function() {
 	return Meteor.roles.find({});
 });
+
+/* CollectionFS entities */
