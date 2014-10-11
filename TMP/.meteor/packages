@@ -15,3 +15,8 @@ accounts-password
 less
 alanning:roles
 rajit:accounts-ui-bootstrap-3
+cfs:standard-packages
+cfs:filesystem
+cfs:gridfs
+cfs:graphicsmagick
+

@@ -1,5 +1,42 @@
 
 <template name="Upload">
-  client/views/upload/upload.html
+	<form name="uploadForm">
+		<input id="fileInput" type="file" multiple="multiple"> 
+	</form>
+	<button id="removeAll">Remove All</button>
+	<br />
+	<h4 class="title-color">Files</h4>
+	{{>files}}
 </template>
 
+<template name="files">
+	<div id="files" class="title-color">
+	<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" id="example">
+
+    <thead>
+       <tr>
+          <th>Name</th>
+          <th>Size</th>
+          <th>Extension</th>
+          <!-- <th>Platform(s)</th>
+          <th>Engine version</th>
+          <th>CSS grade</th> -->
+        </tr>
+    </thead>
+    <tbody>
+		{{#each files}}
+			<!-- stuff to do on each iteration goes here -->
+			<!-- <p>Orig name: {{this.name}}</p>
+			<p>Orig extension: {{this.extension}}</p> -->
+		<tr class="odd gradeX">
+          <td>{{this.name}}</td>
+          <td>{{this.size}}</td>
+          <td>{{this.extension}}</td>
+        </tr>
+		{{/each}}
+		
+    </tbody>
+    </table>
+
+	</div>
+</template>
