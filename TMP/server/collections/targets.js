@@ -5,7 +5,7 @@
  *  }
  */
 
-Targets.allow({
+TargetsCollection.allow({
   insert: function (userId, doc) {
     return true;
   },
@@ -19,7 +19,7 @@ Targets.allow({
   }
 });
 
-Targets.deny({
+TargetsCollection.deny({
   insert: function (userId, doc) {
     return false;
   },

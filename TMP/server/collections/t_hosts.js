@@ -5,7 +5,7 @@
  *  }
  */
 
-THosts.allow({
+THostsCollection.allow({
   insert: function (userId, doc) {
     return true;
   },
@@ -19,7 +19,7 @@ THosts.allow({
   }
 });
 
-THosts.deny({
+THostsCollection.deny({
   insert: function (userId, doc) {
     return false;
   },

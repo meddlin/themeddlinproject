@@ -1,11 +1,11 @@
 /*
  * Add query methods like this:
- *  MimeMessage.findPublic = function () {
- *    return MimeMessage.find({is_public: true});
+ *  ReconTools.findPublic = function () {
+ *    return ReconTools.find({is_public: true});
  *  }
  */
 
-MimeMessage.allow({
+NetworkToolCollection.allow({
   insert: function (userId, doc) {
     return true;
   },
@@ -15,14 +15,11 @@ MimeMessage.allow({
   },
 
   remove: function (userId, doc) {
-    return true;
-  },
-  download: function() {
     return true;
   }
 });
 
-MimeMessage.deny({
+NetworkToolCollection.deny({
   insert: function (userId, doc) {
     return false;
   },
@@ -32,9 +29,6 @@ MimeMessage.deny({
   },
 
   remove: function (userId, doc) {
-    return false;
-  },
-  download: function() {
     return false;
   }
 });

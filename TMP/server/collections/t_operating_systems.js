@@ -5,7 +5,7 @@
  *  }
  */
 
-TOperatingSystems.allow({
+TOperatingSystemsCollection.allow({
   insert: function (userId, doc) {
     return true;
   },
@@ -19,7 +19,7 @@ TOperatingSystems.allow({
   }
 });
 
-TOperatingSystems.deny({
+TOperatingSystemsCollection.deny({
   insert: function (userId, doc) {
     return false;
   },

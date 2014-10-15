@@ -33,7 +33,6 @@ Router.onBeforeAction(
 		return [Meteor.subscribe('coll-1', this.params._id),
 			Meteor.subscribe('coll-2', this.params._id)];
 	}
-	
 */
 
 Router.map(function () {
@@ -48,34 +47,11 @@ Router.map(function () {
 	this.route('upload', {
 		path: '/upload',
 		waitOn: function (){
-			return Meteor.subscribe('mime_application');
+			return Meteor.subscribe('mime_upload');
 		}
 	});
 	this.route('admin', {
 		path: '/admin'
 	});
-	/*,
-					Meteor.subscribe('mime_audio'),
-					Meteor.subscribe('mime_chemical'),
-					Meteor.subscribe('mime_image'),
-					Meteor.subscribe('mime_inode'),
-					Meteor.subscribe('mime_message'),
-					Meteor.subscribe('mime_model'),
-					Meteor.subscribe('mime_multipart'),
-					Meteor.subscribe('mime_text'),
-					Meteor.subscribe('mime_video'),
-					Meteor.subscribe('mime_xconference'),
-					Meteor.subscribe('mime_xepoc'),
-					Meteor.subscribe('mime_xworld')*/
 });
 
-
-/*
-Complete List: http://www.iana.org/assignments/media-types/media-types.xhtml
-found @: http://stackoverflow.com/questions/1735659/list-of-all-mimetypes-on-the-planet-mapped-to-file-extensions
-also check: /etc/mime.types
-
-ERROR -> "" [unknown, error]
-.mht
-.apple
-*/

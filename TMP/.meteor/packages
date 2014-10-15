@@ -7,7 +7,6 @@ standard-app-packages
 iron:router
 meteorhacks:fast-render
 d3
-mrt:datatables-bootstrap3
 jquery
 natestrauser:x-editable-bootstrap
 simison:bootstrap3-less
@@ -19,4 +18,5 @@ cfs:standard-packages
 cfs:filesystem
 cfs:gridfs
 cfs:graphicsmagick
+loftsteinn:datatables-bootstrap3
 

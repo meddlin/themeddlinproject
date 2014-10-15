@@ -5,7 +5,7 @@
  *  }
  */
 
-TSoftware.allow({
+TSoftwareCollection.allow({
   insert: function (userId, doc) {
     return true;
   },
@@ -19,7 +19,7 @@ TSoftware.allow({
   }
 });
 
-TSoftware.deny({
+TSoftwareCollection.deny({
   insert: function (userId, doc) {
     return false;
   },

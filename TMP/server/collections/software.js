@@ -5,7 +5,7 @@
  *  }
  */
 
-Software.allow({
+SoftwareCollection.allow({
   insert: function (userId, doc) {
     return true;
   },
@@ -19,7 +19,7 @@ Software.allow({
   }
 });
 
-Software.deny({
+SoftwareCollection.deny({
   insert: function (userId, doc) {
     return false;
   },

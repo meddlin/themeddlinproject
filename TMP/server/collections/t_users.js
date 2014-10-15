@@ -5,7 +5,7 @@
  *  }
  */
 
-TUsers.allow({
+TUsersCollection.allow({
   insert: function (userId, doc) {
     return true;
   },
@@ -19,7 +19,7 @@ TUsers.allow({
   }
 });
 
-TUsers.deny({
+TUsersCollection.deny({
   insert: function (userId, doc) {
     return false;
   },

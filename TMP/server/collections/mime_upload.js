@@ -1,11 +1,11 @@
 /*
  * Add query methods like this:
- *  MimeXepoc.findPublic = function () {
- *    return MimeXepoc.find({is_public: true});
+ *  MimeUpload.findPublic = function () {
+ *    return MimeUpload.find({is_public: true});
  *  }
  */
 
-MimeXepoc.allow({
+MimeUpload.allow({
   insert: function (userId, doc) {
     return true;
   },
@@ -18,11 +18,11 @@ MimeXepoc.allow({
     return true;
   },
   download: function() {
-    return true;
+        return true;
   }
 });
 
-MimeXepoc.deny({
+MimeUpload.deny({
   insert: function (userId, doc) {
     return false;
   },
@@ -35,6 +35,6 @@ MimeXepoc.deny({
     return false;
   },
   download: function() {
-    return false;
+        return false;
   }
 });
