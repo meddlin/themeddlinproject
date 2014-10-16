@@ -39,19 +39,20 @@ Router.map(function () {
 	this.route('home', {
 		path: '/'
 	});
-		//the waitOn: function() goes here and Meteor.subscribe goes inside of it
-			//sauce: https://meteorhacks.com/subscription-manager-for-iron-router.html
 	this.route('profile', {
 		path: '/profile'
 	});
 	this.route('upload', {
-		path: '/upload',
-		waitOn: function (){
-			return Meteor.subscribe('mime_upload');
-		}
+		path: '/upload'
 	});
 	this.route('admin', {
 		path: '/admin'
 	});
+  	this.route('hosts', {path: '/hosts'});
+  	this.route('dashboard', {path: '/dashboard'});
+  	this.route('pushpins', {path: '/pushpins'});
+  	this.route('osinfo', {path: '/osinfo'});
+  	this.route('softwareinfo', {path: '/softwareinfo'});
+  	this.route('targetusers', {path: '/targetusers'});
 });
 
