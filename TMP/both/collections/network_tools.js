@@ -1,3 +1,10 @@
+/* SCHEMA  --------------
+	{
+		name: ""
+		link: ""
+	}
+*/
+
 NetworkTool = function(document){
 	_.extend(this, document);
 };
@@ -6,7 +13,7 @@ NetworkTool.prototype = {
 	constructor: NetworkTool
 };
 
-NetworkToolCollection = new Mongo.Collection('recon_tools', {
+NetworkToolCollection = new Mongo.Collection('network_tools', {
 	transform: function (document){
 		return new NetworkTool(document);
 	}
