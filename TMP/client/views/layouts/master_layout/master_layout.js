@@ -9,6 +9,7 @@ Template.MasterLayout.events({
    *
    *  }
    */
+
 });
 
 Template.MasterLayout.helpers({
@@ -19,6 +20,10 @@ Template.MasterLayout.helpers({
    *  }
    */
 });
+
+Template.messages.messages = function(){
+  return Messages.find( {}, {sort: {time: -1}} );
+}
 
 /*****************************************************************************/
 /* MasterLayout: Lifecycle Hooks */

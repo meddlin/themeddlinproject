@@ -49,16 +49,40 @@
 
 <template name="rightSideBar">
 	<div id="sidebar-wrapper" class="col-lg-3 visible-lg text-info pull-right">
-      <p>Chat</p>
+      {{> chat}}
       <br />
-      <p>Recent Activity</p>
+      {{> recentActivity}}
     </div>
 </template>
 
 <template name="chat">
 <!-- chat application stuff here -->
+	<div class="container">
+		<p>TMP Chat</p>
+		{{> chatBox}}
+	</div>
+</template>
+
+<template name="chatBox">
+	<div id="messages">
+		{{#each messages}}
+			{{> chatMessage}}
+		{{/each}}
+	</div>
+	<textarea id="chat-message"></textarea><br />
+	<button class="btn btn-primary" id="send">Send</button>
+</template>
+
+<template name='chatMessage'>
+	<div>
+		<b>{{user}}:</b> {{message}}
+	</div>
 </template>
 
 <template name="recentActivity">
 <!-- recent activity 'log' goes here -->
+	<p>Recent Activity</p>
 </template>
+
+
+
