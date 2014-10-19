@@ -14,9 +14,10 @@
 			</div>
 		</div>
 	</div>
-	{{> sideNavigation}}
+	{{> leftSideBar}}
+	{{> rightSideBar}}
 
-	<div class="container">
+	<div class="container col-sm-9">
 		{{> yield}}
 	</div>
 </template>
@@ -24,26 +25,40 @@
 <template name="navigation">
 	<ul class="nav navbar-nav">
 		<li><a href="{{pathFor 'profile'}}" class="title-color">Profile</a></li>
-		<li><a href="{{pathFor 'upload'}}" class="title-color">Upload</a></li>
-		<li><a href="{{pathFor 'admin'}}" class="title-color">Admin</a></li>
-		<li><a href="{{pathFor 'hosts'}}" class="title-color">Hosts</a></li>
 		<li><a href="{{pathFor 'dashboard'}}" class="title-color">Dashboard</a></li>
-		<li><a href="{{pathFor 'pushpins'}}" class="title-color">Pushpins</a></li>
-		<li><a href="{{pathFor 'softwareinfo'}}" class="title-color">SoftwareInfo</a></li>
-		<li><a href="{{pathFor 'osinfo'}}" class="title-color">OSInfo</a></li>
-		<li><a href="{{pathFor 'targetusers'}}" class="title-color">TargetUsers</a></li>
+		<li><a href="{{pathFor 'softwareinfo'}}" class="title-color">Software Info</a></li>
+		<li><a href="{{pathFor 'osinfo'}}" class="title-color">OS Info</a></li>
+		<li><a href="{{pathFor 'admin'}}" class="title-color">Admin</a></li>
 	</ul>
 </template>
 
-<template name="sideNavigation">
+<template name="leftSideBar">
 <!-- sauce: http://bootsnipp.com/snippets/featured/navigation-sidebar-with-toggle -->
-	<div id="sidebar-wrapper">
+	<div id="sidebar-wrapper" class="col-sm-3 text-success">
       <ul id="sidebar_menu" class="sidebar-nav">
            <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
       </ul>
         <ul class="sidebar-nav" id="sidebar">
-          <li><a>Link1<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-          <li><a>link2<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+          <li><a href="{{pathFor 'upload'}}">Upload<span class="glyphicon glyphicon-upload"></span></a></li>
+          <li><a href="{{pathFor 'hosts'}}">Hosts<span class="glyphicon glyphicon-globe"></span></a></li>
+          <li><a href="{{pathFor 'pushpins'}}">Pushpins<span class="glyphicon glyphicon-pushpin"></span></a></li>
+          <li><a href="{{pathFor 'targetusers'}}">TargetUsers<span class="glyphicon glyphicon-user"></span></a></li>
         </ul>
     </div>
+</template>
+
+<template name="rightSideBar">
+	<div id="sidebar-wrapper" class="col-lg-3 visible-lg text-info pull-right">
+      <p>Chat</p>
+      <br />
+      <p>Recent Activity</p>
+    </div>
+</template>
+
+<template name="chat">
+<!-- chat application stuff here -->
+</template>
+
+<template name="recentActivity">
+<!-- recent activity 'log' goes here -->
 </template>

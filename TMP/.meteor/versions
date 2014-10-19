@@ -34,6 +34,7 @@ ctl@1.0.2
 d3@1.0.0
 ddp@1.0.10
 deps@1.0.5
+duongthienduc:meteor-bootstrap-growl@1.0.2
 ejson@1.0.4
 email@1.0.4
 fastclick@1.0.1
@@ -56,16 +57,17 @@ livedata@1.0.11
 localstorage@1.0.1
 loftsteinn:datatables-bootstrap3@0.2.0
 logging@1.0.4
+maazalik:highcharts@0.2.2
 meteor-platform@1.1.2
 meteor@1.1.2
 meteorhacks:fast-render@1.1.2
 minifiers@1.1.1
 minimongo@1.0.4
-mizzao:bootstrap-3@3.2.0
+mizzao:bootstrap-3@3.2.0_1
 mobile-status-bar@1.0.1
 mongo-livedata@1.0.6
 mongo@1.0.7
-natestrauser:x-editable-bootstrap@1.5.2
+natestrauser:x-editable-bootstrap@1.5.2_1
 npm-bcrypt@0.7.7
 observe-sequence@1.0.3
 ordered-dict@1.0.1

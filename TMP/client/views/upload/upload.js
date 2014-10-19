@@ -3,11 +3,13 @@
 /* Upload: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
 Template.Upload.events({
-   'click #removeAll': function(){
+   'click #removeAll': function(event){
+      event.preventDefault();
       Meteor.call('removeAllFiles');
     },
 
    'change #fileInput': function (event) {
+    event.preventDefault();
     FS.Utility.eachFile(event, function(file) {
       console.log("file name: " + file.name)
       console.log("file type: " + file.type)
