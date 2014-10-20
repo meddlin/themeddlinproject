@@ -7,10 +7,31 @@
 @mp-red: #a20000;
 @mp-white-cream: #fcf9f4;
 
+@chat-component-width: 340px;
+@chat-component-height: 300px;
+@activity-component-width: 340px;
+@activity-component-height: 150px;
+
 body {
 	background-color: @mp-gray;
 }
 
 .title-color{
 	color: @mp-white-cream;
+}
+
+#chat-message{
+	background-color: @mp-white-cream;
+	width: @chat-component-width;
+	height: @chat-component-height;
+	overflow-y: auto; //this stops the <div> from auto-expanding upon new entry
+}
+
+#chat-input{
+	width: @chat-component-width;
+}
+
+#activity-area{
+	min-width: @activity-component-width;
+	min-height: @activity-component-height;
 }

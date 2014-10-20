@@ -17,7 +17,7 @@
 	{{> leftSideBar}}
 	{{> rightSideBar}}
 
-	<div class="container col-sm-9">
+	<div class="col-sm-9">
 		{{> yield}}
 	</div>
 </template>
@@ -58,30 +58,37 @@
 <template name="chat">
 <!-- chat application stuff here -->
 	<div class="container">
-		<p>TMP Chat</p>
+		<h3><span class="label label-info">TMP Chat</span></h3>
 		{{> chatBox}}
+		{{> chatInput}}
 	</div>
 </template>
 
 <template name="chatBox">
-	<div id="messages">
+	<div id="chat-message">
 		{{#each messages}}
-			{{> chatMessage}}
+			{{> chatMessage}}<br />
 		{{/each}}
 	</div>
-	<textarea id="chat-message"></textarea><br />
-	<button class="btn btn-primary" id="send">Send</button>
 </template>
 
 <template name='chatMessage'>
-	<div>
-		<b>{{user}}:</b> {{message}}
+	<b>{{user}}</b>: {{message}}
+</template>
+
+<template name="chatInput">
+	<div class="input-group input-group-sm" id="chat-input">
+		<span class="input-group-addon"><span class="glyphicon glyphicon-chevron-right"></span></span>
+		<input type="text" id="send" class="form-control" placeholder="message">
 	</div>
 </template>
 
 <template name="recentActivity">
 <!-- recent activity 'log' goes here -->
-	<p>Recent Activity</p>
+	<div class="container">
+		<h3><span class="label label-info">Recent Activity</span></h3>
+		<textarea id="activity-area"></textarea><br />
+	</div>
 </template>
 
 

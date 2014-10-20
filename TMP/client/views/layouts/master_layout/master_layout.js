@@ -9,8 +9,30 @@ Template.MasterLayout.events({
    *
    *  }
    */
+   'keydown input#send' : function (event){
+      if (event.which == 13){
+        //var user = Meteor.user();
+        var name = Meteor.userId();
+        var message = document.getElementById('send');
+        var currentTime = new Date().toTimeString();
+        console.log("name: " + name + " | message: " + message.value + " | currTime: " + currentTime);
+        if (message.value != ''){
+          Chat.insert({user: name, message: message.value, time: currentTime});
+          document.getElementById('send').value = '';
+          message.value = '';
+          var chatBox = document.getElementById('chat-message');
+          chatBox.scrollTop = chatBox.scrollHeight;
+        }
+      }
+   } //end keydown input#send
 
 });
+
+Template.chatBox.messages = function(){
+  /*var items = Chat.find({}, {sort: {time: 1}}).fetch();
+  return items.slice(-15);*/
+  return Chat.find();
+};
 
 Template.MasterLayout.helpers({
   /*
@@ -21,14 +43,11 @@ Template.MasterLayout.helpers({
    */
 });
 
-Template.messages.messages = function(){
-  return Messages.find( {}, {sort: {time: -1}} );
-}
-
 /*****************************************************************************/
 /* MasterLayout: Lifecycle Hooks */
 /*****************************************************************************/
 Template.MasterLayout.created = function () {
+  return Meteor.subscribe('chat');
 };
 
 Template.MasterLayout.rendered = function () {
