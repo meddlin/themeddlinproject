@@ -1,5 +1,9 @@
 
 <template name="Dashboard">
-  client/views/dashboard/dashboard.html
+  <h2>The Dashboard</h2>
+  {{> hostsChart}}
 </template>
 
+<template name="hostsChart">
+	<div id="hosts-chart-container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+</template>

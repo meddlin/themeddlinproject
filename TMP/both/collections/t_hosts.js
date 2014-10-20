@@ -6,6 +6,10 @@ THost.prototype = {
 	constructor: THost
 };
 
+/*THost.find = function() {
+	return THostsCollection.find();
+};*/
+
 THostsCollection = new Mongo.Collection('t_hosts', {
 	transform: function (document){
 		return new THost(document);

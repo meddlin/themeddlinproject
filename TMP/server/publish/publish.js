@@ -12,6 +12,10 @@ Meteor.publish('chat', function() {
 	return Chat.find({}, {fields: {message:{$slice: -10}}});
 });
 
+Meteor.publish('t_hosts', function() {
+	return THostsCollection.find();
+});
+
 /* CollectionFS entities */
 Meteor.publish('mime_upload', function() {
 	return MimeUpload.find();
