@@ -4,6 +4,29 @@ Meteor.methods({
 	}
 });
 
+/*
+	Recon-ng: TABLES --> [companies|contacts|credentials|dashboard|domains|globals|hosts|info|keys|leaks|locations|
+							modules|netblocks|options|ports|pushpins|schema|source|vulnerabilities|workspaces]
+*/
+/*Meteor.methods({
+	reconngCsvParse: function(file) {
+		Papa.parse(file, {
+			complete: function(results){
+				console.log("Stringify the results...");
+				console.log("results: " + console.log(results));
+
+				var fileData = results.data;
+				for (var i = 0; i < fileData.length; i++){
+					for (var j = 0; j < fileData[i].length; j++){
+						console.log(fileData[i][j]);
+					}
+				}
+			}
+		});
+	}
+});*/
+
+
 /* This is only to stay in as long as we need it. */
 var port = {
 	number: "80",
