@@ -11,9 +11,9 @@ Template.Upload.events({
    'change #fileInput': function (event) {
     event.preventDefault();
     FS.Utility.eachFile(event, function(file) {
-      console.log("file name: " + file.name)
-      console.log("file type: " + file.type)
-      console.log("file size: " + file.size + " bytes | " + (file.size / 1024) + "KB | " + (file.size / (1024*1024)) + "MB")
+      console.log("file name: " + file.name);
+      console.log("file type: " + file.type);
+      console.log("file size: " + file.size + " bytes | " + (file.size / 1024) + "KB | " + (file.size / (1024*1024)) + "MB");
       console.log(file.type + " insert");
       MimeUpload.insert(file);
 
@@ -34,20 +34,41 @@ Template.Upload.events({
             }
           }
         });
-        /*Papa.parse(file, {
-          complete: function(results) {
-            header: true,
-            console.log("results: " + console.log(results));
-            var fileData = results.data; //it's an array of arrays, so Array [ arr[m], arr[n]]
-            console.log(fileData[0]);
-            console.log(fileData[1]);
-            console.log("fileData[0].length: " + fileData[0].length);
-            for (var i = 0; i < fileData[0].length; i++){
-              var el = fileData[0][i];
-              console.log("i: " + i + " | el: " + el);
-            }
-          }
-        });*/
+      }
+      /* XML PARSER */
+      if(file.type == "text/xml"){
+        Meteor.call('callPy', file, function(err, sumVar){
+          console.log(sumVar);
+        });
+        console.log("xml parsing goes here");
+        var xmlDoc = $.parseXML(file);
+        $xml = $(xmlDoc);
+        console.log(xmlDoc);
+        console.log($xml);
+        var vbLvl = $xml.find('verbose');
+
+        console.log("attempting to find some text...");
+        var xmlForJavaScript = xmlDoc;
+        var nmaprunJS = xmlForJavaScript.getElementsByTagName("nmaprun");
+        var scanner = nmaprunJS.getAttribute("scanner");
+        console.log("JS nmaprun: " + nmaprunJS);
+        console.log("JS scanner: " + scanner);
+
+        $xml.find('nmaprun').each(function() {
+          console.log("in jquery: nmaprun");
+          console.log( $(this).attr('scanner') );
+        });
+        $xml.find('verbose').each(function() {
+          console.log("in jquery: verbose");
+          var verboseLevel = $(this).attr('level');
+          console.log(verboseLevel);
+          //console.log( $(this).attr('level') );
+        });
+        $xml.find('port').each(function() {
+          console.log("in jquery: port");
+          console.log( $(this).attr('portid') );
+        });
+        console.log("after jquery");
       }
 
     });

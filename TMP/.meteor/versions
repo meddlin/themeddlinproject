@@ -61,7 +61,9 @@ logging@1.0.4
 maazalik:highcharts@0.2.2
 meteor-platform@1.1.2
 meteor@1.1.2
+meteorhacks:async@1.0.0
 meteorhacks:fast-render@1.1.2
+meteorhacks:npm@1.2.0
 minifiers@1.1.1
 minimongo@1.0.4
 mizzao:bootstrap-3@3.2.0_1
@@ -70,8 +72,11 @@ mongo-livedata@1.0.6
 mongo@1.0.7
 natestrauser:x-editable-bootstrap@1.5.2_1
 npm-bcrypt@0.7.7
+npm-container@1.0.0
 observe-sequence@1.0.3
 ordered-dict@1.0.1
+peerlibrary:blocking@0.4.2
+peerlibrary:xml2js@0.4.4_3
 raix:eventemitter@0.0.1
 rajit:accounts-ui-bootstrap-3@0.3.10
 random@1.0.1

@@ -1,6 +1,23 @@
 Meteor.methods({
 	removeAllFiles: function() {
 		return MimeUpload.remove({});
+	},
+	callPy: function(file){
+		var childProcess = Meteor.npmRequire("child_process");
+		var Fiber = Meteor.npmRequire('fibers');
+		new Fiber(function() {
+			console.log('test python file');
+			var file_path = "/Users/meddlin/hw.py";
+			childProcess.exec("python " + file_path, function(error, stdout, stderr) {
+				if (error) console.log(error);
+				if (stdout) console.log(stdout);
+				if (stderr) console.log(stderr);
+			});
+		}).run();
+
+		console.log("hi");
+		console.log(file.toString());
+		return "hi";
 	}
 });
 
