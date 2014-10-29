@@ -17,10 +17,9 @@ Template.Upload.events({
       console.log(file.type + " insert");
       MimeUpload.insert(file);
 
-      /* HTML PARSER */
+      /* CSV PARSER */
       if(file.type == "text/csv"){
         console.log("csv parsing goes here");
-        Meteor.call('reconngCsvParse', file);
         Papa.parse(file, {
           complete: function(results){
             console.log("Stringify the results...");
@@ -37,10 +36,21 @@ Template.Upload.events({
       }
       /* XML PARSER */
       if(file.type == "text/xml"){
+        var fileReader = new FileReader();
+
+        /* since readAsText() is an asynchronous method, there needs to be a listener
+            this event listener is called once the file has finished loading
+         */
+        fileReader.onload = function(e){
+          var xmlText = fileReader.result;
+          console.log("xmlText: " + xmlText);
+        }
+        fileReader.readAsText(file);
+
         Meteor.call('callPy', file, function(err, sumVar){
           console.log(sumVar);
         });
-        console.log("xml parsing goes here");
+        /*console.log("xml parsing goes here");
         var xmlDoc = $.parseXML(file);
         $xml = $(xmlDoc);
         console.log(xmlDoc);
@@ -68,7 +78,7 @@ Template.Upload.events({
           console.log("in jquery: port");
           console.log( $(this).attr('portid') );
         });
-        console.log("after jquery");
+        console.log("after jquery");*/
       }
 
     });
