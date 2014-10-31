@@ -43,42 +43,20 @@ Template.Upload.events({
          */
         fileReader.onload = function(e){
           var xmlText = fileReader.result;
-          console.log("xmlText: " + xmlText);
+          //console.log("xmlText: " + xmlText);
+          parseTheXmlFile(xmlText); //parsing with jQuery
+          Meteor.call('parseXML', xmlText, function(err, parsedXml) {
+            console.log("parsedXml");
+            console.log("px: " + parsedXml);
+            console.log("takeupspace");
+          });
+
+          //Meteor method call
+          /*Meteor.call('callPy', xmlText, function(err, sumVar){
+            console.log(sumVar);
+          });*/
         }
         fileReader.readAsText(file);
-
-        Meteor.call('callPy', file, function(err, sumVar){
-          console.log(sumVar);
-        });
-        /*console.log("xml parsing goes here");
-        var xmlDoc = $.parseXML(file);
-        $xml = $(xmlDoc);
-        console.log(xmlDoc);
-        console.log($xml);
-        var vbLvl = $xml.find('verbose');
-
-        console.log("attempting to find some text...");
-        var xmlForJavaScript = xmlDoc;
-        var nmaprunJS = xmlForJavaScript.getElementsByTagName("nmaprun");
-        var scanner = nmaprunJS.getAttribute("scanner");
-        console.log("JS nmaprun: " + nmaprunJS);
-        console.log("JS scanner: " + scanner);
-
-        $xml.find('nmaprun').each(function() {
-          console.log("in jquery: nmaprun");
-          console.log( $(this).attr('scanner') );
-        });
-        $xml.find('verbose').each(function() {
-          console.log("in jquery: verbose");
-          var verboseLevel = $(this).attr('level');
-          console.log(verboseLevel);
-          //console.log( $(this).attr('level') );
-        });
-        $xml.find('port').each(function() {
-          console.log("in jquery: port");
-          console.log( $(this).attr('portid') );
-        });
-        console.log("after jquery");*/
       }
 
     });
@@ -98,6 +76,18 @@ Template.Upload.helpers({
 
 Template.files.files = function() {
   return MimeUpload.find();
+};
+
+parseTheXmlFile = function(xmlText){
+  var xmlDoc = $.parseXML(xmlText);
+  $xml = $(xmlDoc);
+  //console.log("nmaprun: " + console.log($xml.find('nmaprun') ));
+  var services = $xml.find('scaninfo').attr('services');
+  var verboseLevel = $xml.find('verbose').attr('level');
+  var numservices = $xml.find('scaninfo').attr('numservices');
+  console.log("verboseLevel: " + verboseLevel);
+  console.log("numservices: " + numservices);
+  console.log("services: " + services);
 };
 
 /*****************************************************************************/

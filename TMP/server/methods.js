@@ -2,22 +2,54 @@ Meteor.methods({
 	removeAllFiles: function() {
 		return MimeUpload.remove({});
 	},
-	callPy: function(file){
+	callPy: function(xmlString){
+		console.log("callPy: a Meteor method")
+		//console.log(xmlString.toString());
 		var childProcess = Meteor.npmRequire("child_process");
 		var Fiber = Meteor.npmRequire('fibers');
-		new Fiber(function() {
-			console.log('test python file');
+		var xmlWithoutNewLines = xmlString.replace(/(\r\n|\n|\r)/gm,"");
+
+		/*var pythonFiber = Fiber(function(newString) {
 			var file_path = "/Users/meddlin/hw.py";
-			childProcess.exec("python " + file_path, function(error, stdout, stderr) {
-				if (error) console.log(error);
-				if (stdout) console.log(stdout);
-				if (stderr) console.log(stderr);
+			console.log("running pythonFiber");
+			newString = xmlString;
+			console.log(newString);
+		});
+		pythonFiber.run();*/
+
+		new Fiber(function() {
+			var file_path = "/Users/meddlin/hw.py";
+			childProcess.exec("python " + file_path + " " + xmlWithoutNewLines.toString(), function(error, stdout, stderr) {
+				if (error) console.log("ERROR: " + error);
+				if (stdout) console.log("STDOUT: " + stdout);
+				if (stderr) console.log("STDERR: " + stderr);
 			});
 		}).run();
-
-		console.log("hi");
-		console.log(file.toString());
 		return "hi";
+	},
+	parseXML: function(xmlString) {
+		var parser = xml2js.parseString;
+		parser(xmlString, function(err, result) {
+			console.log(">> result");
+			console.log(result);
+			console.log(">> result.nmaprun");
+			console.log(result.nmaprun);
+			console.log(">> result.nmaprun.$");
+			console.log(result.nmaprun.$);
+			console.log(">> result.nmaprun.$.scanner");
+			console.log(result.nmaprun.$.scanner);
+			console.log(">> result.nmaprun.$.args");
+			console.log(result.nmaprun.$.args);
+			console.log(">> result.nmaprun.$.start");
+			console.log(result.nmaprun.$.start);
+			console.log(">> result.nmaprun.$.startstr");
+			console.log(result.nmaprun.$.startstr);
+			console.log(">> result.nmaprun.$.version");
+			console.log(result.nmaprun.$.version);
+			console.log(">> result.nmaprun.$.xmloutputversion");
+			console.log(result.nmaprun.$.xmloutputversion);
+			return result;
+		});
 	}
 });
 
@@ -25,24 +57,6 @@ Meteor.methods({
 	Recon-ng: TABLES --> [companies|contacts|credentials|dashboard|domains|globals|hosts|info|keys|leaks|locations|
 							modules|netblocks|options|ports|pushpins|schema|source|vulnerabilities|workspaces]
 */
-/*Meteor.methods({
-	reconngCsvParse: function(file) {
-		Papa.parse(file, {
-			complete: function(results){
-				console.log("Stringify the results...");
-				console.log("results: " + console.log(results));
-
-				var fileData = results.data;
-				for (var i = 0; i < fileData.length; i++){
-					for (var j = 0; j < fileData[i].length; j++){
-						console.log(fileData[i][j]);
-					}
-				}
-			}
-		});
-	}
-});*/
-
 
 /* This is only to stay in as long as we need it. */
 var port = {

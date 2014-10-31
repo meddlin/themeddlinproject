@@ -22,8 +22,9 @@ loftsteinn:datatables-bootstrap3
 duongthienduc:meteor-bootstrap-growl
 maazalik:highcharts
 harrison:papa-parse
-peerlibrary:xml2js
 meteorhacks:npm
 
 
 npm-container
+peerlibrary:xml2js
+
