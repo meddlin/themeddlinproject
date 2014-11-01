@@ -29,6 +29,7 @@ cfs:tempstore@0.0.2
 cfs:upload-http@0.0.2
 cfs:worker@0.0.0
 check@1.0.2
+coffeescript@1.0.4
 ctl-helper@1.0.4
 ctl@1.0.2
 d3@1.0.0
@@ -42,6 +43,7 @@ follower-livedata@1.0.2
 geojson-utils@1.0.1
 handlebars@1.0.1
 harrison:papa-parse@1.0.8
+houston:admin@1.1.1
 html-tools@1.0.2
 htmljs@1.0.2
 http@1.0.8
@@ -95,6 +97,7 @@ srp@1.0.1
 standard-app-packages@1.0.3
 stylus@1.0.5
 templating@1.0.9
+tmeasday:paginated-subscription@0.2.0
 tracker@1.0.3
 ui@1.0.4
 underscore@1.0.1

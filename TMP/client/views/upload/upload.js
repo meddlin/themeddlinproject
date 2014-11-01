@@ -44,7 +44,7 @@ Template.Upload.events({
         fileReader.onload = function(e){
           var xmlText = fileReader.result;
           //console.log("xmlText: " + xmlText);
-          parseTheXmlFile(xmlText); //parsing with jQuery
+          //parseTheXmlFile(xmlText); //parsing with jQuery
           Meteor.call('parseXML', xmlText, function(err, parsedXml) {
             console.log("parsedXml");
             console.log("px: " + parsedXml);
