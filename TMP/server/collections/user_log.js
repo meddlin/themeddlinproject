@@ -1,11 +1,11 @@
 /*
  * Add query methods like this:
- *  MimeUpload.findPublic = function () {
- *    return MimeUpload.find({is_public: true});
+ *  UserLog.findPublic = function () {
+ *    return UserLog.find({is_public: true});
  *  }
  */
 
-MimeUpload.allow({
+UserLogsCollection.allow({
   insert: function (userId, doc) {
     return true;
   },
@@ -16,13 +16,10 @@ MimeUpload.allow({
 
   remove: function (userId, doc) {
     return true;
-  },
-  download: function() {
-        return true;
   }
 });
 
-MimeUpload.deny({
+UserLogsCollection.deny({
   insert: function (userId, doc) {
     return false;
   },
@@ -32,9 +29,6 @@ MimeUpload.deny({
   },
 
   remove: function (userId, doc) {
-    return false;
-  },
-  download: function() {
     return false;
   }
 });

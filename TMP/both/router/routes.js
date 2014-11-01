@@ -45,9 +45,9 @@ Router.map(function () {
 	this.route('upload', {
 		path: '/upload'
 	});
-	/*this.route('admin', {
+	this.route('admin', {
 		path: '/admin'
-	});*/
+	});
   	this.route('hosts', {path: '/hosts'});
   	this.route('dashboard', {path: '/dashboard'});
   	this.route('pushpins', {path: '/pushpins'});

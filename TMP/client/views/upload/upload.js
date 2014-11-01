@@ -13,20 +13,21 @@ Template.Upload.events({
     var fileReader = new FileReader(); //used for reading DOM File objects into strings
 
     FS.Utility.eachFile(event, function(file) {
+      var moment = Meteor.npmRequire('moment');
+      var timestamp = new Date();
+
+      console.log();
       console.log("file name: " + file.name);
       console.log("file type: " + file.type);
       console.log("file size: " + file.size + " bytes | " + (file.size / 1024) + "KB | " + (file.size / (1024*1024)) + "MB");
       console.log(file.type + " insert");
-      MimeUpload.insert(file);
 
-      /* CSV PARSER */
-      if(file.type == "text/csv"){
+      if(file.type == "text/csv"){ /* CSV PARSER */
         console.log("csv parsing goes here");
         Papa.parse(file, {
           complete: function(results){
             console.log("Stringify the results...");
             console.log("results: " + console.log(results));
-
             var fileData = results.data;
             for (var i = 0; i < fileData.length; i++){
               for (var j = 0; j < fileData[i].length; j++){
@@ -35,9 +36,8 @@ Template.Upload.events({
             }
           }
         });
-      }
-      /* XML PARSER */
-      if(file.type == "text/xml"){
+      }else if(file.type == "text/xml"){ /* XML PARSER */
+        MimeUpload(this.userId, timestamp, file);
         /* since readAsText() is an asynchronous method, there needs to be a listener
             this event listener is called once the file has finished loading
          */
@@ -50,11 +50,8 @@ Template.Upload.events({
           });
         }
         fileReader.readAsText(file);
-      }
-
-      /* HTML PARSER */
-      if(file.type == "text/html"){
-
+      }else if(file.type == "text/html"){ /* HTML PARSER */
+        //stuff goes here
       }
 
     });

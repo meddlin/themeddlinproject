@@ -29,7 +29,6 @@ cfs:tempstore@0.0.2
 cfs:upload-http@0.0.2
 cfs:worker@0.0.0
 check@1.0.2
-coffeescript@1.0.4
 ctl-helper@1.0.4
 ctl@1.0.2
 d3@1.0.0
@@ -43,7 +42,6 @@ follower-livedata@1.0.2
 geojson-utils@1.0.1
 handlebars@1.0.1
 harrison:papa-parse@1.0.8
-houston:admin@1.1.1
 html-tools@1.0.2
 htmljs@1.0.2
 http@1.0.8
@@ -72,6 +70,7 @@ mizzao:bootstrap-3@3.2.0_1
 mobile-status-bar@1.0.1
 mongo-livedata@1.0.6
 mongo@1.0.8
+mrt:moment@2.8.1
 natestrauser:x-editable-bootstrap@1.5.2_1
 npm-bcrypt@0.7.7
 npm-container@1.0.0
@@ -96,9 +95,7 @@ spacebars@1.0.3
 srp@1.0.1
 standard-app-packages@1.0.3
 stylus@1.0.5
-superstringsoft:observatory@0.4.8
 templating@1.0.9
-tmeasday:paginated-subscription@0.2.0
 tracker@1.0.3
 ui@1.0.4
 underscore@1.0.1

@@ -27,6 +27,5 @@ meteorhacks:npm
 
 npm-container
 peerlibrary:xml2js
-houston:admin
-superstringsoft:observatory
+mrt:moment
 

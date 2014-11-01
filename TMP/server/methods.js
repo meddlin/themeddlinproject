@@ -9,14 +9,6 @@ Meteor.methods({
 		var Fiber = Meteor.npmRequire('fibers');
 		var xmlWithoutNewLines = xmlString.replace(/(\r\n|\n|\r)/gm,"");
 
-		/*var pythonFiber = Fiber(function(newString) {
-			var file_path = "/Users/meddlin/hw.py";
-			console.log("running pythonFiber");
-			newString = xmlString;
-			console.log(newString);
-		});
-		pythonFiber.run();*/
-
 		new Fiber(function() {
 			var file_path = "/Users/meddlin/hw.py";
 			childProcess.exec("python " + file_path + " " + xmlWithoutNewLines.toString(), function(error, stdout, stderr) {
@@ -30,6 +22,10 @@ Meteor.methods({
 	parseXML: function(xmlString) {
 		var parser = xml2js.parseString;
 		parser(xmlString, function(err, result) {
+
+			console.log(result);
+
+			/*console.log("running parseXML");
 			console.log(">> result");
 			console.log(result);
 			console.log(">> result.nmaprun");
@@ -47,7 +43,7 @@ Meteor.methods({
 			console.log(">> result.nmaprun.$.version");
 			console.log(result.nmaprun.$.version);
 			console.log(">> result.nmaprun.$.xmloutputversion");
-			console.log(result.nmaprun.$.xmloutputversion);
+			console.log(result.nmaprun.$.xmloutputversion);*/
 			return result;
 		});
 	}
