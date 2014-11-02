@@ -28,4 +28,8 @@ meteorhacks:npm
 npm-container
 peerlibrary:xml2js
 mrt:moment
+aldeed:collection2
+aldeed:autoform
+yogiben:autoform-modals
+yogiben:autoform-file
 

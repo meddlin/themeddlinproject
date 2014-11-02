@@ -1,3 +1,4 @@
+var timestamp = moment();
 
 /*****************************************************************************/
 /* Upload: Event Handlers and Helpersss .js*/
@@ -13,14 +14,9 @@ Template.Upload.events({
     var fileReader = new FileReader(); //used for reading DOM File objects into strings
 
     FS.Utility.eachFile(event, function(file) {
-      var moment = Meteor.npmRequire('moment');
-      var timestamp = new Date();
-
-      console.log();
-      console.log("file name: " + file.name);
-      console.log("file type: " + file.type);
-      console.log("file size: " + file.size + " bytes | " + (file.size / 1024) + "KB | " + (file.size / (1024*1024)) + "MB");
-      console.log(file.type + " insert");
+      console.log("file name: " + file.name + "file type: " + file.type + "file size: " + file.size + " bytes | " + (file.size / 1024) + "KB | " + (file.size / (1024*1024)) + "MB");
+      var insertId = MimeUpload.insert(file, this.userId);
+      var user = this.userId;
 
       if(file.type == "text/csv"){ /* CSV PARSER */
         console.log("csv parsing goes here");
@@ -37,16 +33,15 @@ Template.Upload.events({
           }
         });
       }else if(file.type == "text/xml"){ /* XML PARSER */
-        MimeUpload(this.userId, timestamp, file);
-        /* since readAsText() is an asynchronous method, there needs to be a listener
-            this event listener is called once the file has finished loading
-         */
+        /* since readAsText() is an asynchronous method, there needs to be a listener this event listener is called once the file has finished loading */
         fileReader.onload = function(e){
           var xmlText = fileReader.result;
-          Meteor.call('parseXML', xmlText, function(err, parsedXml) {
-            console.log("parsedXml");
-            console.log("px: " + parsedXml);
-            console.log("takeupspace");
+          Meteor.call('storeXML', xmlText, function(err, parsedXml) {
+            if(err){
+              console.log("storeXML ERROR");
+            }else{
+              console.log("storeXML SUCCESS");
+            }
           });
         }
         fileReader.readAsText(file);

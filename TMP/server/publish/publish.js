@@ -15,8 +15,8 @@ Meteor.publish('chat', function() {
 Meteor.publish('t_hosts', function() {
 	return THostsCollection.find();
 });
-Meteor.publish('user_log', function() {
-	return UserLogsCollection.find();
+Meteor.publish('user_data_log', function() {
+	return UserDataLogsCollection.find();
 });
 
 /* CollectionFS entities */

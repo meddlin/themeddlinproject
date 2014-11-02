@@ -19,33 +19,73 @@ Meteor.methods({
 		}).run();
 		return "hi";
 	},
-	parseXML: function(xmlString) {
+	storeXML: function(xmlString) {
+		check(xmlString, String); //enforce strict types
+		//check(userId, some-type);
+		//check(insertId, some-type);
+		/*
+			store: JSON data, user, network-tool, time, _idOfXML
+		*/
 		var parser = xml2js.parseString;
-		parser(xmlString, function(err, result) {
+		var parseResult = parser(xmlString, function(err, result) {
 
-			console.log(result);
-
-			/*console.log("running parseXML");
+			var nmaprun = result.nmaprun;
 			console.log(">> result");
 			console.log(result);
-			console.log(">> result.nmaprun");
-			console.log(result.nmaprun);
-			console.log(">> result.nmaprun.$");
-			console.log(result.nmaprun.$);
-			console.log(">> result.nmaprun.$.scanner");
-			console.log(result.nmaprun.$.scanner);
-			console.log(">> result.nmaprun.$.args");
-			console.log(result.nmaprun.$.args);
-			console.log(">> result.nmaprun.$.start");
-			console.log(result.nmaprun.$.start);
-			console.log(">> result.nmaprun.$.startstr");
-			console.log(result.nmaprun.$.startstr);
-			console.log(">> result.nmaprun.$.version");
-			console.log(result.nmaprun.$.version);
-			console.log(">> result.nmaprun.$.xmloutputversion");
-			console.log(result.nmaprun.$.xmloutputversion);*/
+
+			console.log(">> nmaprun.$"); console.log(nmaprun.$);
+			console.log(">> nmaprun.$.scanner"); console.log(nmaprun.$.scanner);
+			console.log(">> nmaprun.$.args"); console.log(nmaprun.$.args);
+			console.log(">> nmaprun.$.start"); console.log(nmaprun.$.start);
+			console.log(">> nmaprun.$.startstr"); console.log(nmaprun.$.startstr);
+			console.log(">> nmaprun.$.version"); console.log(nmaprun.$.version);
+			console.log(">> nmaprun.$.xmloutputversion"); console.log(nmaprun.$.xmloutputversion);
+
+			console.log(">> nmaprun.scaninfo");
+			console.log(nmaprun.scaninfo);
+			if(nmaprun.scaninfo != undefined){
+				nmaprun.scaninfo.forEach(grabScaninfoElements);
+			}else{
+				console.log("nmaprun.scaninfo UNDEFINED");
+			}
+
+			console.log(">> nmaprun.verbose");
+			console.log(nmaprun.verbose);
+			if(nmaprun.verbose != undefined){
+				nmaprun.verbose.forEach(grabVerboseElements);
+			}else{
+				console.log("nmaprun.verbose UNDEFINED");
+			}
+
+			console.log(">> nmaprun.debugging");
+			console.log(nmaprun.debugging);
+			if(nmaprun.debugging != undefined){
+				nmaprun.debugging.forEach(grabDebuggingElements);
+			}else{
+				console.log("nmaprun.debugging UNDEFINED");
+			}
+
+			console.log(">> nmaprun.host");
+			console.log(nmaprun.host);
+			if(nmaprun.host != undefined){
+				nmaprun.host.forEach(grabHostElements);
+			}else{
+				console.log("nmaprun.host UNDEFINED");
+			}
+
+			console.log(">> nmaprun.runstats");
+			console.log(nmaprun.runstats);
+			if(nmaprun.runstats != undefined){
+				nmaprun.runstats.forEach(grabRunstatsElements);
+			}else{
+				console.log("nmaprun.runstats UNDEFINED");
+			}
+
+			var now = moment().format();
+			//The Insert
 			return result;
 		});
+		return parseResult;
 	}
 });
 

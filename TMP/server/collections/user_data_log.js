@@ -5,7 +5,7 @@
  *  }
  */
 
-UserLogsCollection.allow({
+UserDataLogsCollection.allow({
   insert: function (userId, doc) {
     return true;
   },
@@ -19,7 +19,7 @@ UserLogsCollection.allow({
   }
 });
 
-UserLogsCollection.deny({
+UserDataLogsCollection.deny({
   insert: function (userId, doc) {
     return false;
   },

@@ -1,14 +1,14 @@
-UserLog = function (document){
+UserDataLog = function (document){
 	_.extend(this, document);
 };
 
-UserLog.prototype = {
-	constructor: UserLog
+UserDataLog.prototype = {
+	constructor: UserDataLog
 };
 
-UserLogsCollection = new Meteor.Collection('user_log', {
+UserDataLogsCollection = new Meteor.Collection('user_data_log', {
 	transform: function(document){
-		return new UserLog(document);
+		return new UserDataLog(document);
 	}
 });
 
