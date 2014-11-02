@@ -33,37 +33,37 @@ Meteor.methods({
 			console.log(">> result");
 			console.log(result);
 
-			console.log(">> nmaprun.$"); console.log(nmaprun.$);
+			/*console.log(">> nmaprun.$"); console.log(nmaprun.$);
 			console.log(">> nmaprun.$.scanner"); console.log(nmaprun.$.scanner);
 			console.log(">> nmaprun.$.args"); console.log(nmaprun.$.args);
 			console.log(">> nmaprun.$.start"); console.log(nmaprun.$.start);
 			console.log(">> nmaprun.$.startstr"); console.log(nmaprun.$.startstr);
 			console.log(">> nmaprun.$.version"); console.log(nmaprun.$.version);
-			console.log(">> nmaprun.$.xmloutputversion"); console.log(nmaprun.$.xmloutputversion);
+			console.log(">> nmaprun.$.xmloutputversion"); console.log(nmaprun.$.xmloutputversion);*/
 
-			console.log(">> nmaprun.scaninfo");
+			/*console.log(">> nmaprun.scaninfo");
 			console.log(nmaprun.scaninfo);
 			if(nmaprun.scaninfo != undefined){
 				nmaprun.scaninfo.forEach(grabScaninfoElements);
 			}else{
 				console.log("nmaprun.scaninfo UNDEFINED");
-			}
+			}*/
 
-			console.log(">> nmaprun.verbose");
+			/*console.log(">> nmaprun.verbose");
 			console.log(nmaprun.verbose);
 			if(nmaprun.verbose != undefined){
 				nmaprun.verbose.forEach(grabVerboseElements);
 			}else{
 				console.log("nmaprun.verbose UNDEFINED");
-			}
+			}*/
 
-			console.log(">> nmaprun.debugging");
+			/*console.log(">> nmaprun.debugging");
 			console.log(nmaprun.debugging);
 			if(nmaprun.debugging != undefined){
 				nmaprun.debugging.forEach(grabDebuggingElements);
 			}else{
 				console.log("nmaprun.debugging UNDEFINED");
-			}
+			}*/
 
 			console.log(">> nmaprun.host");
 			console.log(nmaprun.host);
@@ -73,13 +73,13 @@ Meteor.methods({
 				console.log("nmaprun.host UNDEFINED");
 			}
 
-			console.log(">> nmaprun.runstats");
+			/*console.log(">> nmaprun.runstats");
 			console.log(nmaprun.runstats);
 			if(nmaprun.runstats != undefined){
 				nmaprun.runstats.forEach(grabRunstatsElements);
 			}else{
 				console.log("nmaprun.runstats UNDEFINED");
-			}
+			}*/
 
 			var now = moment().format();
 			//The Insert
