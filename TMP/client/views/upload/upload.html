@@ -5,9 +5,17 @@
 	</form>
 	<button id="removeAll">Remove All</button>
 	<br />
+<!--   {{> testModal}} -->
   <h4 class="title-color">Files</h4>
 	{{>files}}
 </template>
+
+
+<!-- Need to try this with a proper Colleciton2 collection. The modal is trying to pop up, but it's erroring out becasue we don't have our data set up as autoforms is expecting it to be -->
+<!-- <template name="testModal">
+  {{> autoformModals}}
+  <a href="#afModal" data-toggle="modal" class="btn btn-primary" collection="Chat" operation="insert" doc="dPZj4WdR5PXJTeQ4c">Add a new post</a>
+</template> -->
 
 <template name="files">
 	<div id="files" class="title-color">
