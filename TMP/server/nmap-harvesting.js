@@ -127,12 +127,18 @@ grabHostAddressElements = function(el, index){
 			console.log(">> el.$: "); console.log(el.$);
 			if(el.$.addr != undefined){
 				console.log(">> el.$.addr"); console.log(el.$.addr);
+				// add here
+				THost.addr = el.$.addr;
 			}
 			if(el.$.addrtype != undefined){
 				console.log(">> el.$.addrtype"); console.log(el.$.addrtype);
+				// add here
+				THost.addrtype = el.$.addrtype;
 			}
 			if(el.$.vendor != undefined){
 				console.log(">> el.$.vendor"); console.log(el.$.vendor);
+				// add here
+				THost.vendor = el.$.vendor;
 			}
 		}
 	}
@@ -142,7 +148,9 @@ grabHostHostnamesElements = function(el, index){
 	console.log("a" + index + ": ");
 	if(el != undefined){
 		console.log(">> el: "); console.log(el);
-		el.hostname.forEach(grabHostHostnamesHostnameElements);
+		if(el.hostname != undefined){
+			el.hostname.forEach(grabHostHostnamesHostnameElements);
+		}
 	}
 };
 
@@ -154,6 +162,7 @@ grabHostHostnamesHostnameElements = function(el, index){
 			console.log(">> el.$: "); console.log(el.$);
 			if(el.$.name != undefined){
 				console.log(">> el.$.name: "); console.log(el.$.name);
+				THost.hostname = el.$.name;
 			}
 			if(el.$.type != undefined){
 				console.log(">> el.$.type: "); console.log(el.$.type);
@@ -198,6 +207,7 @@ grabHostPortsPortElements = function(el, index){
 			}
 			if(el.$.portid != undefined){
 				console.log(">> el.$.portid: "); console.log(el.$.portid);
+				THost.portNumber = el.$.portid;
 			}
 		}
 		if(el.state != undefined){
@@ -299,6 +309,7 @@ grabHostOsOsmatchElements = function(el, index){
 			console.log(">> el.$: "); console.log(el.$);
 			if(el.$.name != undefined){
 				console.log(">> el.$.name: "); console.log(el.$.name);
+				THost.portOs = el.$.name;
 			}
 			if(el.$.accuracy != undefined){
 				console.log(">> el.$.accuracy: "); console.log(el.$.accuracy);

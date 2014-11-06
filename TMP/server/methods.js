@@ -26,6 +26,7 @@ Meteor.methods({
 		/*
 			store: JSON data, user, network-tool, time, _idOfXML
 		*/
+
 		var parser = xml2js.parseString;
 		var parseResult = parser(xmlString, function(err, result) {
 
@@ -81,8 +82,24 @@ Meteor.methods({
 				console.log("nmaprun.runstats UNDEFINED");
 			}
 
-			var now = moment().format();
 			//The Insert
+			THostsCollection.insert({
+				ip: THost.addr,
+				hostname: THost.hostname,
+				ports: [
+					THost.portNumber,
+					THost.portService,
+					THost.portPortStatus,
+					THost.portOs,
+					THost.portVersion,
+					THost.portProtocol,
+					],
+				region: THost.region,
+				country: THost.country,
+				latitude: THost.latitude,
+				longitude: THost.longitude
+			});
+			console.log(THost);
 			return result;
 		});
 		return parseResult;
@@ -108,7 +125,7 @@ var seedData = function(){
 	NetworkToolCollection.remove({}); //clears the collection
 	OperatingSystemsCollection.remove({});
 	SoftwareCollection.remove({});
-	THostsCollection.remove({});
+	/*THostsCollection.remove({});*/
 	TOperatingSystemsCollection.remove({});
 	TSoftwareCollection.remove({});
 	TUsersCollection.remove({});
@@ -127,7 +144,7 @@ var seedData = function(){
 			name: "prog" + i,
 			version: "version" + i
 		});
-		THostsCollection.insert({
+		/*THostsCollection.insert({
 			ip: "101." + i + "." + i + "." + i,
 			hostname: "hostname" + i + ".com",
 			ports: [
@@ -142,7 +159,7 @@ var seedData = function(){
 			country: "country" + i + "IsBest",
 			latitude: "wayy" + i,
 			longitude: "overthere" + i
-		});
+		});*/
 		TOperatingSystemsCollection.insert({
 			name: "OS" + i,
 			version: "version" + i,

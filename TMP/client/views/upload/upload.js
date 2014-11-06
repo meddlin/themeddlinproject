@@ -15,7 +15,6 @@ Template.Upload.events({
 
     FS.Utility.eachFile(event, function(file) {
       console.log("file name: " + file.name + "file type: " + file.type + "file size: " + file.size + " bytes | " + (file.size / 1024) + "KB | " + (file.size / (1024*1024)) + "MB");
-      var insertId = MimeUpload.insert(file, this.userId);
       var user = this.userId;
 
       if(file.type == "text/csv"){ /* CSV PARSER */
@@ -48,6 +47,8 @@ Template.Upload.events({
       }else if(file.type == "text/html"){ /* HTML PARSER */
         //stuff goes here
       }
+
+      var insertId = MimeUpload.insert(file, this.userId);
 
     });
     $("form")[0].reset();

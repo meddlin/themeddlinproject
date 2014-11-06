@@ -4,7 +4,6 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-iron:router
 meteorhacks:fast-render
 d3
 jquery
@@ -34,4 +33,5 @@ yogiben:autoform-modals
 yogiben:autoform-file
 yogiben:admin
 chrismbeckett:fontawesome4
+iron:router
 
