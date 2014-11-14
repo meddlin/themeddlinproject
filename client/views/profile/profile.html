@@ -3,15 +3,32 @@
 		<div class="row" id="champion-messages">
 			<div class="col-md-12">{{> alert}}</div>
 			<div class="col-md-4">
-				{{#autoForm id="updatePicture" collection=Users doc=currentUser type="update"}}
+				<!-- {{#autoForm id="updatePicture" collection=Users doc=currentUser type="update"}}
 					{{> afFileUpload name="profile.picture" collection='ProfilePictures'}}
 				<button type="submit" class="btn btn-primary">Update</button>
-				{{/autoForm}}
+				{{/autoForm}} -->
+				<!-- {{#autoForm schema=Schemas.UserProfile collection=Users doc=currentUser type="update"}}
+					<fieldset>
+						{{> afFileUpload name="picture" collection='ProfilePictures'}}
+						<div>
+							<button type="submit" class="btn btn-primary">Update</button>
+						</div>
+					</fieldset>
+				{{/autoForm}} -->
 			</div>
 			<div class="col-md-8">
-				{{#autoForm id="updateProfile" collection=Users doc=currentUser type="update"}}
+				<!-- {{#autoForm id="updateProfile" collection=Users doc=currentUser type="update"}}
 				{{> afQuickField name='profile' omitFields="profile.picture"}}
 				<button type="submit" class="btn btn-primary">Update</button>
+				{{/autoForm}} -->
+				{{#autoForm schema=Schemas.UserProfile collection=Users id="updateProfile" doc=currentUser type="update"}}
+					<fieldset>
+						<!-- <legend>UpdateProfile</legend> -->
+						{{> afQuickField name='profile' omitFields="profile.picture"}}
+						<div>
+							<button type="submit" class="btn btn-primary">Update</button>
+						</div>
+					</fieldset>
 				{{/autoForm}}
 			</div>
 		</div>
