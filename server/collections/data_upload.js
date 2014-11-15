@@ -16,7 +16,11 @@ MimeUpload.allow({
 
   remove: function (userId, doc) {
     return true;
-  }
+  },
+  download: function(){
+    return true;
+  },
+  fetch: null
 });
 
 MimeUpload.deny({

@@ -7,6 +7,11 @@ Softwares = new Meteor.Collection('softwares');
  *  }
  */
 
+/*
+	Follows the basic information given in the "brief description box" on the right-side
+	of the Wikipedia page.
+	ex: https://en.wikipedia.org/wiki/Adobe_Acrobat
+ */
 Softwares.attachSchema(new SimpleSchema({
 	name: {
 		type: String,

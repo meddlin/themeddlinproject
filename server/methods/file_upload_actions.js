@@ -66,7 +66,7 @@ Meteor.methods({
 			}
 
 			//The Insert
-			THostsCollection.insert({
+			THosts.insert({
 				ip: THost.addr,
 				hostname: THost.hostname,
 				ports: [
