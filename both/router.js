@@ -2,7 +2,9 @@ Router.configure({
   layoutTemplate: "masterLayout",
   loadingTemplate: "loading",
   notFoundTemplate: "notFound",
-  routeControllerNameConverter: "camelCase"
+  routeControllerNameConverter: "camelCase",
+  progress: true,
+  progressSpinner: false
 });
 
 Router.onBeforeAction("loading");
@@ -13,6 +15,7 @@ Router.map(function() {
   });
   this.route("dashboard", {
     path: "/dashboard",
+    progressDebug: true,
     waitOn: function() {
       return [Meteor.subscribe('posts'), Meteor.subscribe('favorites'), Meteor.subscribe('comments')];
     },

@@ -76,7 +76,7 @@ meteor-platform@1.2.0
 meteor@1.1.3
 meteorhacks:async@1.0.0
 meteorhacks:fast-render@1.2.1
-meteorhacks:npm@1.2.0
+meteorhacks:npm@1.2.1
 minifiers@1.1.2
 minimongo@1.0.5
 mizzao:bootstrap-3@3.2.0_1
@@ -123,11 +123,11 @@ webapp-hashing@1.0.1
 webapp@1.1.4
 yogiben:admin@1.0.4
 yogiben:alerts@0.0.2
-yogiben:autoform-file@0.0.2
+yogiben:autoform-file@0.0.3
 yogiben:autoform-modals@0.2.3
 yogiben:bootstrap@0.3.1
 yogiben:comments@0.0.8
 yogiben:favorites@0.0.4
-yogiben:helpers@0.0.1
+yogiben:helpers@0.0.3
 yogiben:notifications@0.0.6
 yogiben:user-helpers@0.0.8

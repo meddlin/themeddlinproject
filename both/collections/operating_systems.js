@@ -23,7 +23,7 @@ OperatingSystems.attachSchema(new SimpleSchema({
 		label: "URL",
 		optional: true
 	},
-
+	/* pulled from Windows7 wikipedia page */
 	developer: {
 		type: String,
 		label: "Developer",
@@ -77,6 +77,23 @@ OperatingSystems.attachSchema(new SimpleSchema({
 	succeddedBy: {
 		type: String,
 		label: "Succeded By",
+		optional: true
+	},
+
+	/* pulled from Ubuntu wikipedia page (only things that were fundamentally different) */
+	osFamily: {
+		type: String,
+		label: "OS Family",
+		optional: true
+	},
+	packageManager: {
+		type: String,
+		label: "Package Manager",
+		optional: true
+	},
+	defaultUserInterface: {
+		type: String,
+		label: "Default User Interface",
 		optional: true
 	}
 }));
