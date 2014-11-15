@@ -12,6 +12,7 @@ OperatingSystems = new Meteor.Collection('operating_systems');
 	Follows the basic information given in the "brief description box" on the right-side
 	of the Wikipedia page.
 	ex: https://en.wikipedia.org/wiki/Windows_7
+	ex: https://en.wikipedia.org/wiki/Ubuntu_%28operating_system%29
  */
 OperatingSystems.attachSchema(new SimpleSchema({
 	name: {
