@@ -2,10 +2,52 @@
 	<div class="layout master-layout {{$.Session.get 'sidebar'}}">
 		{{>header}}
 		<div class="container close-navbar">
-			{{> yield }}
+		    <div class="col-md-11">
+			    {{> yield }}
+			</div>
+			<div class="col-md-1">
+				<div class="opener">
+					<font color="#ffffff"><span class="glyphicon glyphicon-comment"></span><p>Toggle</p><p>Toggle2</p></font>
+				</div>
+			    <div id="chatBox">
+				    {{> chat}}
+				</div>
+		    </div>
 		</div>
 		<div class="push"></div>
 	</div>
 	{{> footer}}
 	{{> autoformModals}}
+</template>
+
+<template name="chat">
+		{{> chatBox}}
+		{{> chatInput}}
+</template>
+
+<template name="chatBox">
+	<div id="chat-message">
+		{{#each messages}}
+			{{> chatMessage}}<br />
+		{{/each}}
+	</div>
+</template>
+
+<template name='chatMessage'>
+	<b>{{user}}</b>: {{message}}
+</template>
+
+<template name="chatInput">
+	<div class="input-group input-group-sm" id="chat-input">
+		<span class="input-group-addon"><span class="glyphicon glyphicon-chevron-right"></span></span>
+		<input type="text" id="send" class="form-control" placeholder="message">
+	</div>
+</template>
+
+<template name="recentActivity">
+<!-- recent activity 'log' goes here -->
+	<div class="container">
+		<h3><span class="label label-info">Recent Activity</span></h3>
+		<textarea id="activity-area"></textarea><br />
+	</div>
 </template>
