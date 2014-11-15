@@ -5,11 +5,7 @@ Router.configure({
   routeControllerNameConverter: "camelCase"
 });
 
-Router.onBeforeAction("loading", function(){
-  NProgress.start();
-  /* waiting for data processing goes here, see: LOADING ANIMATION: go here for a tutorial | https://www.eventedmind.com/classes/how-to/meteor-how-to-use-an-ios7-style-loading-indicator-with-iron-router */
-  NProgress.done();
-});
+Router.onBeforeAction("loading");
 Router.map(function() {
   this.route("home", {
     path: "/",

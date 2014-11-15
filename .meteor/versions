@@ -86,11 +86,14 @@ mongo@1.0.8
 mquandalle:jade@0.2.7
 mrt:moment@2.8.1
 mrt:underscore-string-latest@2.3.3
+multiply:iron-router-progress@1.0.0
 natestrauser:x-editable-bootstrap@1.5.2_1
 npm-bcrypt@0.7.7
 npm-container@1.0.0
 observe-sequence@1.0.3
 ordered-dict@1.0.1
+pascoual:pdfjs@0.8.1169
+pascoual:pdfkit@1.0.4
 peerlibrary:blocking@0.4.2
 peerlibrary:xml2js@0.4.4_3
 pfafman:nvd3@0.1.0

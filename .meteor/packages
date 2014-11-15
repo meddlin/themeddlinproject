@@ -45,4 +45,7 @@ peerlibrary:xml2js
 simison:bootstrap3-less
 aldeed:autoform-bs-datepicker
 joshowens:accounts-entry
+multiply:iron-router-progress
+pascoual:pdfjs
+pascoual:pdfkit
 
