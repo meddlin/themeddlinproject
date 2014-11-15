@@ -1,4 +1,4 @@
-meteor-starter
+The Meddlin Project
 ==============
 
 Kickstart your meteor projects with a functioning landing page and admin.
