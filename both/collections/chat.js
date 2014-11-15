@@ -40,5 +40,6 @@ Chat.attachSchema(new SimpleSchema({
 	},*/
 	message: {
 		type: String,
+		label: "Message"
 	}
 }));
