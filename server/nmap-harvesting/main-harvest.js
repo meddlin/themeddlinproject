@@ -1,6 +1,57 @@
 /* NMAP HARVESTING -- "I want 50 percent of ye plunder." */
 
 //function grabXXElements(el, index){} do this for every <tag> that can have multiples underneath it
+
+mainNmapHarvest = function(nmaprun){
+	console.log(">> nmaprun.$"); console.log(nmaprun.$);
+	console.log(">> nmaprun.$.scanner"); console.log(nmaprun.$.scanner);
+	console.log(">> nmaprun.$.args"); console.log(nmaprun.$.args);
+	console.log(">> nmaprun.$.start"); console.log(nmaprun.$.start);
+	console.log(">> nmaprun.$.startstr"); console.log(nmaprun.$.startstr);
+	console.log(">> nmaprun.$.version"); console.log(nmaprun.$.version);
+	console.log(">> nmaprun.$.xmloutputversion"); console.log(nmaprun.$.xmloutputversion);
+
+	console.log(">> nmaprun.scaninfo");
+	console.log(nmaprun.scaninfo);
+	if(nmaprun.scaninfo != undefined){
+		nmaprun.scaninfo.forEach(grabScaninfoElements);
+	}else{
+		console.log("nmaprun.scaninfo UNDEFINED");
+	}
+
+	console.log(">> nmaprun.verbose");
+	console.log(nmaprun.verbose);
+	if(nmaprun.verbose != undefined){
+		nmaprun.verbose.forEach(grabVerboseElements);
+	}else{
+		console.log("nmaprun.verbose UNDEFINED");
+	}
+
+	console.log(">> nmaprun.debugging");
+	console.log(nmaprun.debugging);
+	if(nmaprun.debugging != undefined){
+		nmaprun.debugging.forEach(grabDebuggingElements);
+	}else{
+		console.log("nmaprun.debugging UNDEFINED");
+	}
+
+	console.log(">> nmaprun.host");
+	console.log(nmaprun.host);
+	if(nmaprun.host != undefined){
+		nmaprun.host.forEach(grabHostElements);
+	}else{
+		console.log("nmaprun.host UNDEFINED");
+	}
+
+	console.log(">> nmaprun.runstats");
+	console.log(nmaprun.runstats);
+	if(nmaprun.runstats != undefined){
+		nmaprun.runstats.forEach(grabRunstatsElements);
+	}else{
+		console.log("nmaprun.runstats UNDEFINED");
+	}
+};
+
 grabScaninfoElements = function (el, index){
 	console.log("a" + index + ": ");
 	if(el != undefined){
@@ -111,50 +162,6 @@ grabRunstatsElements = function (el, index){
 		if(el.hosts != undefined){
 			console.log(">> el.hosts: "); console.log(el.hosts);
 			el.hosts.forEach(grabRunstatsHostsElements);
-		}
-	}
-};
-
-grabRunstatsFinishedElements = function (el, index){
-	console.log("a" + index + ": ");
-	if(el != undefined){
-		console.log(">> el: "); console.log(el);
-		if(el.$ != undefined){
-			console.log(">> el.$: "); console.log(el.$);
-			if(el.$.time != undefined){
-			console.log(">> el.finished.time: "); console.log(el.$.time);
-			}
-			if(el.$.timestr != undefined){
-				console.log(">> el.finished.timestr: "); console.log(el.$.timestr);
-			}
-			if(el.$.elapsed != undefined){
-				console.log(">> el.finished.elapsed: "); console.log(el.$.elapsed);
-			}
-			if(el.$.summary != undefined){
-				console.log(">> el.finished.summary: "); console.log(el.$.summary);
-			}
-			if(el.$.exit != undefined){
-				console.log(">> el.finished.exit: "); console.log(el.$.exit);
-			}
-		}
-	}
-};
-
-grabRunstatsHostsElements = function (el, index){
-	console.log("a" + index + ": ");
-	if(el != undefined){
-		console.log(">> el: "); console.log(el);
-		if(el.$ != undefined){
-			console.log(">> el.$: "); console.log(el.$);
-			if(el.$.up != undefined){
-				console.log(">> el.$.up: "); console.log(el.$.up);
-			}
-			if(el.$.down != undefined){
-				console.log(">> el.$.down: "); console.log(el.$.down);
-			}
-			if(el.$.total != undefined){
-				console.log(">> el.$.total: "); console.log(el.$.total);
-			}
 		}
 	}
 };
