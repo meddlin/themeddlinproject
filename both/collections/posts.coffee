@@ -24,7 +24,7 @@ Schemas.Posts = new SimpleSchema
 		autoValue: ->
 			if this.isUpdate
 				new Date()
-	owner: 
+	owner:
 		type: String
 		regEx: SimpleSchema.RegEx.Id
 		autoValue: ->

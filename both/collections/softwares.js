@@ -7,19 +7,19 @@ Softwares = new Meteor.Collection('softwares');
  *  }
  */
 
-Softwares.attachSchema(new SimlpeSchema({
+Softwares.attachSchema(new SimpleSchema({
 	name: {
 		type: String,
 		label: "Name"
 	},
 	url: {
 		type: String,
-		label: "URL"
+		label: "URL",
 		optional: true
 	},
 	developer: {
 		type: String,
-		label: "Developer"
+		label: "Developer",
 		optional: true
 	},
 	programmingLanguage: {
