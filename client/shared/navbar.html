@@ -12,6 +12,7 @@
 			<div class="navbar-collapse collapse">
 				{{#if currentUser}}
 				<ul class="nav navbar-nav navbar-right">
+					<li><a href="{{pathFor 'upload'}}">Upload</a></li>
 					<li><a href="{{pathFor 'hosts'}}">Hosts</a></li>
 					<li><a href="{{pathFor 'osinfo'}}">OS Info</a></li>
 					<li><a href="{{pathFor 'softwareinfo'}}">Software Info</a></li>
@@ -47,7 +48,7 @@
 					<li>
 						<a class="close-navbar" href="/sign-in">Log in</a>
 					</li>
-					
+
 				</ul>
 				{{/if}}
 			</div>

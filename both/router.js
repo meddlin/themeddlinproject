@@ -15,7 +15,6 @@ Router.map(function() {
   });
   this.route("dashboard", {
     path: "/dashboard",
-    progressDebug: true,
     waitOn: function() {
       return [Meteor.subscribe('posts'), Meteor.subscribe('favorites'), Meteor.subscribe('comments')];
     },
@@ -52,6 +51,12 @@ Router.map(function() {
   });
   this.route("targetusers", {
     path: "/targetusers"
+  });
+  this.route("upload", {
+    path: "/upload",
+    waitOn: function() {
+      return Meteor.subscribe('mime_upload');
+    }
   });
 });
 

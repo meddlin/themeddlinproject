@@ -1,4 +1,16 @@
-MimeUpload = new Meteor.Collection('mime_upload');
+MimeUpload = new FS.Collection('mime_upload', {
+	stores: [new FS.Store.GridFS("upload_master")],
+	filter: {
+		maxSize: 1073741824, //in bytes
+		onInvalid: function(message){
+			if (Meteor.isClient){
+				App.alertError(message)
+			}else{
+				console.warn(message);
+			}
+		}
+	}
+});
 
 /*
  * Add query methods like this:
