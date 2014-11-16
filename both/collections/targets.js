@@ -6,3 +6,7 @@ Targets = new Meteor.Collection('targets');
  *    return Targets.find({is_public: true});
  *  }
  */
+
+/* all data for a target should be accessible from here */
+
+Targets.attachSchema(TargetSchema);

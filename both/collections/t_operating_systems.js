@@ -6,3 +6,4 @@ TOperatingSystems = new Meteor.Collection('t_operating_systems');
  *    return TOperatingSystems.find({is_public: true});
  *  }
  */
+TOperatingSystems.attachSchema(TOperatingSystemSchema);

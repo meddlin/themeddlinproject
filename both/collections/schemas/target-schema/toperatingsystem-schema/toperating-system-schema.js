@@ -1,0 +1,3 @@
+TOperatingSystemSchema = new SimpleSchema({
+	
+});

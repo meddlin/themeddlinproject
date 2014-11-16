@@ -1,0 +1,3 @@
+TUserSchema = new SimpleSchema({
+	
+});

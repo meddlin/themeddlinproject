@@ -6,3 +6,4 @@ TUsers = new Meteor.Collection('t_users');
  *    return TUsers.find({is_public: true});
  *  }
  */
+TUsers.attachSchema(TUserSchema);

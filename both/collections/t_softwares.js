@@ -6,3 +6,4 @@ TSoftwares = new Meteor.Collection('t_softwares');
  *    return TSoftwares.find({is_public: true});
  *  }
  */
+TSoftwares.attachSchema(TSoftwareSchema);
