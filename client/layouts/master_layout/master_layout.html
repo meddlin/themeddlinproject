@@ -5,6 +5,7 @@
 		    <div class="col-md-11">
 			    {{> yield }}
 			</div>
+			{{#if currentUser}}
 			<div class="col-md-1">
 				<div class="opener">
 					<font color="#ffffff"><span class="glyphicon glyphicon-comment"></span><p>Toggle</p><p>Toggle2</p></font>
@@ -13,6 +14,7 @@
 				    {{> chat}}
 				</div>
 		    </div>
+		    {{/if}}
 		</div>
 		<div class="push"></div>
 	</div>

@@ -2,14 +2,14 @@
 /*****************************************************************************/
 /* MasterLayout: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-  // $('#opener').on('click', function() {   
+  // $('#opener').on('click', function() {
   //   var panel = $('#slide-panel');
   //   if (panel.hasClass("invisible")) {
   //     panel.removeClass('invisible').animate({'margin-right':'-300px'});
   //   } else {
   //     panel.addClass('invisible').animate({'margin-right':'0px'});
-  //   } 
-  //   return false; 
+  //   }
+  //   return false;
   // });
 
   Template.MasterLayout.events({
@@ -28,15 +28,15 @@
         panel.removeClass('invisible').animate({'margin-right':'-300px'});
       } else {
         panel.addClass('invisible').animate({'margin-right':'0px'});
-      } 
-      return false; 
+      }
+      return false;
     },
     */
 
    'click #opener': function(event){
       event.preventDefault();
       $('#chatBox').toggle(drop, {}, 500);
-      //return false; 
+      //return false;
     },
 
 
