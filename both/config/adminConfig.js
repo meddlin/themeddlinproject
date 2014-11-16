@@ -8,21 +8,59 @@ AdminConfig =
 {
   name: Config.name,
   collections: {
-    NetworkTools: {},
-    OperatingSystems: {},
-    Softwares: {},
-    THosts: {},
-    TOperatingSystems: {},
-    TSoftwares: {},
-    TUsers: {},
-    Targets: {},
-    Chat: {},
-    RecentActivity: {},
-    MimeUpload: {
-      icon: 'angle-double-up'
+    NetworkTools: {
+      icon: 'sitemap'
     },
-    UserDataLogs: {},
-    Posts: {
+    OperatingSystems: {
+      icon: 'desktop'
+    },
+    Softwares: {
+      icon: 'cubes'
+    },
+    THosts: {
+      icon: 'exchange'
+    },
+    TOperatingSystems: {
+      icon: 'users'
+    },
+    TSoftwares: {
+      icon: 'users'
+    },
+    TUsers: {
+      icon: 'users'
+    },
+    Targets: {
+      icon: 'database'
+    },
+    Chat: {
+      icon: 'comments'
+    },
+    RecentActivity: {
+      icon: 'list'
+    },
+    MimeUpload: {
+      icon: 'cloud-upload'
+    },
+    UserDataLogs: {
+      icon: 'tasks'
+    },
+  },
+  dashboard: {
+    homeUrl: '/dashboard',
+    skin: "black"
+  },
+  autoForm: {
+    omitFields: ['createdAt', 'updatedAt']
+  }
+};
+
+if (Meteor.isClient) {
+  window.AdminConfig = AdminConfig;
+} else if (Meteor.isServer) {
+  global.AdminConfig = AdminConfig;
+}
+
+/*Posts: {
       color: 'red',
       icon: 'pencil',
       tableColumns: [
@@ -55,19 +93,4 @@ AdminConfig =
           collection: 'Users'
         }
       ]
-    }
-  },
-  dashboard: {
-    homeUrl: '/dashboard',
-    skin: "black"
-  },
-  autoForm: {
-    omitFields: ['createdAt', 'updatedAt']
-  }
-};
-
-if (Meteor.isClient) {
-  window.AdminConfig = AdminConfig;
-} else if (Meteor.isServer) {
-  global.AdminConfig = AdminConfig;
-}
+    }*/
