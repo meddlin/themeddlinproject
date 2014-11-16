@@ -25,13 +25,15 @@ Template.dashboard.created = function () {
 };
 
 Template.dashboard.rendered = function () {
-$(function (){
+  $.Metro.initPanels("#mainArea");
+
+  $(function (){
     $('#hosts-chart-container').highcharts({
       chart:{
         type: 'bar'
       },
       title:{
-        text:'I got some Hosts for You'
+        text:'Subnets with Most Hosts'
       },
       subtitle:{
         text:'you like?'
@@ -90,7 +92,7 @@ $(function (){
         data: [12, 58, 190, 184]
       }]
     })
-  })
+  });
 };
 
 Template.dashboard.destroyed = function () {

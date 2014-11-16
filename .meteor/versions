@@ -35,6 +35,7 @@ cfs:upload-http@0.0.2
 cfs:worker@0.0.0
 check@1.0.2
 chrismbeckett:fontawesome4@4.2.2
+chrismbeckett:metro-ui2@2.0.32
 chrismbeckett:toastr@2.1.0
 chuangbo:cookie@1.1.0
 coffeescript@1.0.4

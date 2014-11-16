@@ -1,9 +1,9 @@
 <template name="masterLayout">
 	<div class="layout master-layout {{$.Session.get 'sidebar'}}">
 		{{>header}}
-		<div class="container close-navbar">
-		    <div class="col-md-11">
-			    {{> yield }}
+		<div class="container close-navbar" id="mainArea">
+			<div class="col-md-11">
+			{{> yield }}
 			</div>
 			{{#if currentUser}}
 			<div class="col-md-1">
@@ -13,8 +13,12 @@
 			    <div id="chatBox">
 				    {{> chat}}
 				</div>
+				<br />
+				<div id="recentActivityBox">
+					{{> recentActivity}}
+				</div>
 		    </div>
-		    {{/if}}
+			{{/if}}
 		</div>
 		<div class="push"></div>
 	</div>
