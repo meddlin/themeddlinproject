@@ -1,20 +1,12 @@
- TSoftwareSchema = new SimpleSchema({
-	name: {
-		type: String,
-		label: "Name"
-	},
-	platform: {
-		type: String,
-		label: "Platform"
-	},
-	version: {
-		type: String,
-		label: "Version",
-		optional: true
-	},
+ChatSchema = new SimpleSchema({
 	owner: {
 		type: String,
 		regEx: SimpleSchema.RegEx.Id,
+		autoValue: function(){
+			if (this.isInsert){
+				return Meteor.userId();
+			}
+		},
 		autoform: {
 			options: function(){
 				return _.map(Meteor.users.find().fetch(), function(user){
@@ -36,13 +28,8 @@
 		},
 		optional: true
 	},
-	updatedAt: {
-		type: Date,
-		autoValue: function(){
-			if (this.isInsert){
-				return new Date();
-			}
-		},
-		optional: true
+	message: {
+		type: String,
+		label: "Message"
 	}
 });

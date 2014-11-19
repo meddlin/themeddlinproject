@@ -40,7 +40,11 @@ AdminConfig =
       icon: 'users',
       tableColumns: [
         {label: 'Name', name: 'name'},
-        {label: 'Platform', name: 'platform'}
+        {label: 'Platform', name: 'platform'},
+        {label: 'Version', name: 'version'},
+        {label: 'Owner', name: 'owner'},
+        {label: 'Created On', name: 'createdAt'},
+        {label: 'Updated On', name: 'updatedOn'}
       ]
     },
     TUsers: {
