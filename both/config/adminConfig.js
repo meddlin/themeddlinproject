@@ -1,5 +1,5 @@
-/*
-Customization
+
+/*Customization
 icon -- FontAwesome icon codes, leave off the "fa-" at the beginning of the code
 */
 
@@ -7,6 +7,7 @@ var AdminConfig;
 AdminConfig =
 {
   name: Config.name,
+  adminEmails: ['user1@email.com', 'admin@email.com'],
   collections: {
     NetworkTools: {
       icon: 'sitemap'
@@ -18,13 +19,29 @@ AdminConfig =
       icon: 'cubes'
     },
     THosts: {
-      icon: 'exchange'
+      icon: 'exchange',
+      tableColumns: [
+        {label: 'IPv4', name: 'ipv4Addr'},
+        {label: 'IPv6', name: 'ipv6Addr'},
+        {label: 'MAC', name: 'macAddr'},
+        {label: 'NIC Vendor', name: 'nicVendor'},
+        {label: 'Ports', name: 'ports'},
+        {label: 'OS Fingerprint', name: 'osFingerprint'},
+        {label: 'Region', name: 'region'},
+        {label: 'Country', name: 'country'},
+        {label: 'Latitude', name: 'latitude'},
+        {label: 'Longitude', name: 'longitude'}
+      ]
     },
     TOperatingSystems: {
       icon: 'users'
     },
     TSoftwares: {
-      icon: 'users'
+      icon: 'users',
+      tableColumns: [
+        {label: 'Name', name: 'name'},
+        {label: 'Platform', name: 'platform'}
+      ]
     },
     TUsers: {
       icon: 'users'
@@ -48,10 +65,10 @@ AdminConfig =
   dashboard: {
     homeUrl: '/dashboard',
     skin: "black"
-  },
+  }/*,
   autoForm: {
     omitFields: ['createdAt', 'updatedAt']
-  }
+  }*/
 };
 
 if (Meteor.isClient) {
@@ -93,4 +110,5 @@ if (Meteor.isClient) {
           collection: 'Users'
         }
       ]
-    }*/
+    }
+*/

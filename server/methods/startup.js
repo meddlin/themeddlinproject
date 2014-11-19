@@ -59,6 +59,7 @@ var seedData = function(){
 		});
 		TSoftwares.insert({
 			name: "prog" + i,
+			platform: "platform" + i,
 			version: "version" + i
 		});
 		TUsers.insert({

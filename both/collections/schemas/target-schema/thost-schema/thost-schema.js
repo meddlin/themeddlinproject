@@ -27,5 +27,21 @@ THostSchema = new SimpleSchema({
 	osFingerprint: {
 		type: OSFingerprintSchema,
 		optional: true
+	},
+	region: {
+		type: String,
+		optional: true
+	},
+	country: {
+		type: String,
+		optional: true
+	},
+	latitude: {
+		type: String,
+		optional: true
+	},
+	longitude: {
+		type: String,
+		optional: true
 	}
 });
