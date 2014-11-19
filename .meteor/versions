@@ -35,7 +35,6 @@ cfs:upload-http@0.0.2
 cfs:worker@0.0.0
 check@1.0.2
 chrismbeckett:fontawesome4@4.2.2
-chrismbeckett:metro-ui2@2.0.32
 chrismbeckett:toastr@2.1.0
 chuangbo:cookie@1.1.0
 coffeescript@1.0.4
@@ -107,6 +106,7 @@ reactive-dict@1.0.4
 reactive-var@1.0.3
 reload@1.1.1
 retry@1.0.1
+richsilv:semantic-ui@1.0.0
 routepolicy@1.0.2
 service-configuration@1.0.2
 session@1.0.4

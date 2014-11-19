@@ -21,27 +21,49 @@
 </template>
 
 <template name="topOSList">
-	<div class="metro">
-		<div class="panel">
-			<div class="panel-header bg-lightBlue fg-white">
-			OS List
-			</div>
-			<div class="panel-content">
-			para para para
-			</div>
-		</div>
+	<div class="ui segment">
+		{{> osList}}
 	</div>
 </template>
 
 <template name="topSoftwareList">
-	<div class="metro">
-		<div class="panel">
-			<div class="panel-header bg-lightBlue fg-white">
-			OS List
-			</div>
-			<div class="panel-content">
-			para para para
-			</div>
-		</div>
+	<div class="ui segment">
+		{{> softwareList}}
+	</div>
+</template>
+
+<template name="osList">
+	<h1 class="ui header">Top OS Hits</h1>
+	<div class="ui list">
+		<a class="item">
+			<i class="right triangle icon"></i>
+			OS 1
+		</a>
+		<a class="item">
+			<i class="right triangle icon"></i>
+			OS 2
+		</a>
+		<a class="item">
+			<i class="right triangle icon"></i>
+			OS 3
+		</a>
+	</div>
+</template>
+
+<template name="softwareList">
+	<h1 class="ui header">Top Software Hits</h1>
+	<div class="ui list">
+		<a class="item">
+			<i class="right triangle icon"></i>
+			Soft 1
+		</a>
+		<a class="item">
+			<i class="right triangle icon"></i>
+			Soft 2
+		</a>
+		<a class="item">
+			<i class="right triangle icon"></i>
+			Soft 3
+		</a>
 	</div>
 </template>

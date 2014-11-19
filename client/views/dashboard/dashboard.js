@@ -25,7 +25,6 @@ Template.dashboard.created = function () {
 };
 
 Template.dashboard.rendered = function () {
-  $.Metro.initPanels("#mainArea");
 
   $(function (){
     $('#hosts-chart-container').highcharts({
