@@ -39,6 +39,11 @@
       //return false;
     },
 
+    'click #leftSideBarTrigger': function(event){
+      event.preventDefault();
+        $('#leftSideBarTrigger').sidebar('toggle');
+    },
+
 
    'keydown input#send' : function (event){
       if (event.which == 13){
@@ -82,6 +87,7 @@ Template.masterLayout.created = function () {
 };
 
 Template.masterLayout.rendered = function () {
+  $('.ui.thin.sidebar').sidebar();
 };
 
 Template.masterLayout.destroyed = function () {
