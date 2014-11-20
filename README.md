@@ -1,7 +1,6 @@
 The Meddlin Project
 ==============
-
-Kickstart your meteor projects with a functioning landing page and admin.
+You may have 10TB of data on your target, but if you can't get to the 4KB file of password hashes it's all useless.
 
 #####To do#####
 * Allow for usernames
