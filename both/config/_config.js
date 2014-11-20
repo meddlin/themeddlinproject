@@ -3,7 +3,7 @@ this.Config = {
   title: '',
   subtitle: 'Hack the planet!',
   logo: function() {
-    return '<b>' + this.name + '</b>';
+    return this.name;
   },
   footer: function() {
     return this.name + ' - Copyright ' + new Date().getFullYear();
