@@ -1,6 +1,6 @@
 
 /*****************************************************************************/
-/* MasterLayout: Event Handlers and Helpersss .js*/
+/* masterLayout: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
   // $('#opener').on('click', function() {
   //   var panel = $('#slide-panel');
@@ -12,7 +12,7 @@
   //   return false;
   // });
 
-  Template.MasterLayout.events({
+  Template.masterLayout.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
@@ -48,7 +48,7 @@
         var currentTime = new Date().toTimeString();
         console.log("name: " + name + " | message: " + message.value + " | currTime: " + currentTime);
         if (message.value != ''){
-          Chat.insert({user: name, message: message.value, time: currentTime});
+          Chat.insert({owner: name, message: message.value, createdAt: currentTime});
           document.getElementById('send').value = '';
           message.value = '';
           var chatBox = document.getElementById('chat-message');
@@ -65,7 +65,7 @@ Template.chatBox.messages = function(){
   return Chat.find();
 };
 
-Template.MasterLayout.helpers({
+Template.masterLayout.helpers({
   /*
    * Example:
    *  items: function () {
@@ -75,15 +75,15 @@ Template.MasterLayout.helpers({
 });
 
 /*****************************************************************************/
-/* MasterLayout: Lifecycle Hooks */
+/* masterLayout: Lifecycle Hooks */
 /*****************************************************************************/
-Template.MasterLayout.created = function () {
+Template.masterLayout.created = function () {
   return Meteor.subscribe('chat');
 };
 
-Template.MasterLayout.rendered = function () {
+Template.masterLayout.rendered = function () {
 };
 
-Template.MasterLayout.destroyed = function () {
+Template.masterLayout.destroyed = function () {
 };
 
