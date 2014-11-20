@@ -43,12 +43,12 @@
    'keydown input#send' : function (event){
       if (event.which == 13){
         //var user = Meteor.user();
-        var name = Meteor.userId();
+        var name = Meteor.user().emails[0].address;
         var message = document.getElementById('send');
         var currentTime = new Date().toTimeString();
         console.log("name: " + name + " | message: " + message.value + " | currTime: " + currentTime);
         if (message.value != ''){
-          Chat.insert({owner: name, message: message.value, createdAt: currentTime});
+          Chat.insert({owner: name, ownerEmail: Meteor.user().emails[0].address, message: message.value, createdAt: currentTime});
           document.getElementById('send').value = '';
           message.value = '';
           var chatBox = document.getElementById('chat-message');

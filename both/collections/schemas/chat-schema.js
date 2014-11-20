@@ -19,6 +19,11 @@ ChatSchema = new SimpleSchema({
 		},
 		optional: true
 	},
+	ownerEmail: {
+		type: String,
+		label: "Owner Email",
+		optional: true
+	},
 	createdAt: {
 		type: Date,
 		autoValue: function(){
