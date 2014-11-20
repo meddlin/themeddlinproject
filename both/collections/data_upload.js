@@ -14,6 +14,19 @@ MimeUpload = new FS.Collection('mime_upload', {
 	}
 });
 
+/*FileEntry.attachSchema(new SimpleSchema({
+	name: {
+		type: String
+	},
+	fileId: {
+		type: String,
+		autoform: {
+			type: "cfs-file",
+			collection: "mime_upload"
+		}
+	}
+}));*/
+
 /*
  * Add query methods like this:
  *  MimeUpload.findPublic = function () {

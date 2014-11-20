@@ -2,7 +2,6 @@
 /*****************************************************************************/
 /* Hosts: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-
 Template.hosts.events({
   /*
    * Example:
@@ -25,7 +24,6 @@ Template.hosts.helpers({
 /* Hosts: Lifecycle Hooks */
 /*****************************************************************************/
 Template.hosts.created = function () {
-  Meteor.subscribe('t_hosts');
 };
 
 Template.hosts.rendered = function () {

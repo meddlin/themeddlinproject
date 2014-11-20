@@ -1,41 +1,5 @@
 
 <template name="hosts">
-  <table class="ui inverted table">
-  	{{> hostsTableHeader}}
-  	{{> hostsTableBody}}
-  </table>
+  client/views/hosts/hosts.html
 </template>
 
-<template name="hostsTableHeader">
-	<thead>
-		<tr>
-			<th>Hostname</th>
-			<th>IPv4</th>
-			<th>MAC</th>
-			<th>Open Ports</th>
-		</tr>
-	</thead>
-</template>
-
-<template name="hostsTableBody">
-	<tbody >
-		<tr>
-	      <td>ns1.selu.edu</td>
-	      <td>147.174.1.5</td>
-	      <td>3f:23:f9:34</td>
-	      <td>YES</td>
-	    </tr>
-	    <tr>
-	      <td>ns2.selu.edu</td>
-	      <td>147.174.1.6</td>
-	      <td>3f:23:f9:34</td>
-	      <td>YES</td>
-	    </tr>
-	    <tr>
-	      <td>ns3.selu.edu</td>
-	      <td>147.174.1.7</td>
-	      <td>3f:23:f9:34</td>
-	      <td>YES</td>
-	    </tr>
-	</tbody>
-</template>

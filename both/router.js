@@ -7,9 +7,7 @@ Router.configure({
   progressSpinner: false
 });
 
-Router.onBeforeAction("loading", function(){
-  this.next();
-});
+Router.onBeforeAction("loading");
 Router.map(function() {
   this.route("home", {
     path: "/",
@@ -18,14 +16,15 @@ Router.map(function() {
   this.route("dashboard", {
     path: "/dashboard",
     waitOn: function() {
-      return [
-        Meteor.subscribe('t_hosts'), Meteor.subscribe('t_operating_systems'),Meteor.subscribe('t_softwares')];
+      return [Meteor.subscribe('posts'), Meteor.subscribe('favorites'), Meteor.subscribe('comments')];
     },
     data: function() {
       return {
-        THosts: THosts.find({}, { sort: {createdAt: -1} }).fetch(),
-        TOperatingSystems: TOperatingSystems.find(),
-        TSoftwares: TSoftwares.find()
+        Posts: Posts.find({}, {
+          sort: {
+            createdAt: -1
+          }
+        }).fetch()
       };
     }
   });
