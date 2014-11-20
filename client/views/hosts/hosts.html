@@ -1,5 +1,58 @@
 
 <template name="hosts">
-  client/views/hosts/hosts.html
+  {{> hostsTable}}
 </template>
 
+<template name="hostsTable">
+	<table class="ui inverted table segment">
+		{{> hostsTableHeader}}
+		{{> hostsTableBody}}
+  	</table>
+</template>
+
+<template name="hostsTableHeader">
+	<thead>
+		<tr><th>Hostname</th>
+		    <th>IPv4</th>
+		    <th>MAC</th>
+		    <th>Open Ports?</th>
+	  	</tr>
+  </thead>
+</template>
+
+<template name="hostsTableFooter">
+	<tfoot>
+	    <tr>
+	    	<th>3 People</th>
+		    <th>2 Approved</th>
+		    <th></th>
+	  </tr>
+  </tfoot>
+</template>
+
+<template name="hostsTableBody">
+	<tbody>
+		<tr>
+	      <td>ns1.selu.edu</td>
+	      <td>147.174.1.3</td>
+	      <td>3j:9f:3f:00</td>
+	      <td>YES</td>
+	    </tr>
+	    <tr>
+	      <td>ns2.selu.edu</td>
+	      <td>147.174.1.4</td>
+	      <td>3j:9f:3f:00</td>
+	      <td>YES</td>
+	    </tr>
+	    <tr>
+	      <td>ns3.selu.edu</td>
+	      <td>147.174.1.5</td>
+	      <td>3j:9f:3f:00</td>
+	      <td>YES</td>
+	    </tr>
+	</tbody>
+</template>
+
+<template name="hostsTableRow">
+<!-- //TODO: the {{}} stuff goes here once we have something being pulled from the collection via JS -->
+</template>
