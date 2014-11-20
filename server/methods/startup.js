@@ -64,12 +64,12 @@ var seedData = function(){
 		});
 		TUsers.insert({
 			fname: "fname" + i,
-			midname: "midname" + i,
+			mname: "midname" + i,
 			lname: "lname" + i,
-			email: "some" + i + "@email.com",
-			hash: "asdf" + i*934 + "asdf",
-			password: "whatiftheyhadasecurepassword?",
 			title: "Capt.",
+			email: "some" + i + "@email.com",
+			password: "whatiftheyhadasecurepassword?",
+			passHash: "wh471f7h3yh4d453cur3p455w0rd?",
 			username: "Jack",
 			region: "Sparrow",
 			country: "Bermuda",

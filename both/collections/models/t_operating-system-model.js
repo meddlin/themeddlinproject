@@ -1,8 +1,8 @@
-TSoftwareModel = {
+TOperatingSystemModel = {
 	name: "",
-	platform: "",
-	version: "",
 	owner: "",
 	createdAt: "",
 	updatedAt: "",
+	platform: "",
+	version: ""
 };

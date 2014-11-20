@@ -1,0 +1,5 @@
+ChatModel = {
+	owner: "",
+	createdAt: "",
+	message: ""
+};

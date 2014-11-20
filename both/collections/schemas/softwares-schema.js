@@ -1,4 +1,4 @@
-TOperatingSystemSchema = new SimpleSchema({
+SoftwareSchema = new SimpleSchema({
 	name: {
 		type: String,
 		label: "Name"
@@ -36,14 +36,39 @@ TOperatingSystemSchema = new SimpleSchema({
 		},
 		optional: true
 	},
-	platform: {
+	url: {
 		type: String,
-		label: "Platform",
+		label: "URL",
+		optional: true
+	},
+	developer: {
+		type: String,
+		label: "Developer",
+		optional: true
+	},
+	programmingLanguage: {
+		type: String,
+		label: "Programming Language",
 		optional: true
 	},
 	version: {
 		type: String,
 		label: "Version",
+		optional: true
+	},
+	platforms: {
+		type: String,
+		label: "Platforms",
+		optional: true
+	},
+	approxSize: {
+		type: String,
+		label: "Approximate Size",
+		optional: true
+	},
+	license: {
+		type: String,
+		label: "License",
 		optional: true
 	}
 });

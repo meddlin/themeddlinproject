@@ -9,7 +9,10 @@ THostModel = {
 	region: "",
 	country: "",
 	latitude: "",
-	longitude: ""
+	longitude: "",
+	owner: "",
+	createdAt: "",
+	updatedAt: ""
 }
 
 /*THost =
