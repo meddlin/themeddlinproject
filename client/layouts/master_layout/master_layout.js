@@ -2,15 +2,6 @@
 /*****************************************************************************/
 /* masterLayout: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-  // $('#opener').on('click', function() {
-  //   var panel = $('#slide-panel');
-  //   if (panel.hasClass("invisible")) {
-  //     panel.removeClass('invisible').animate({'margin-right':'-300px'});
-  //   } else {
-  //     panel.addClass('invisible').animate({'margin-right':'0px'});
-  //   }
-  //   return false;
-  // });
 
   Template.masterLayout.events({
   /*
@@ -19,19 +10,6 @@
    *
    *  }
    */
-
-   /*
-   'click #opener': function(event){
-      event.preventDefault();
-      var panel = $('#slide-panel');
-      if (panel.hasClass("invisible")) {
-        panel.removeClass('invisible').animate({'margin-right':'-300px'});
-      } else {
-        panel.addClass('invisible').animate({'margin-right':'0px'});
-      }
-      return false;
-    },
-    */
 
    'click #opener': function(event){
       event.preventDefault();

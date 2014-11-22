@@ -79,7 +79,7 @@ $(function () {
             plotShadow: false
         },
         title: {
-            text: 'OS Breakdown'
+            text: 'Software Breakdown'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
