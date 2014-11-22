@@ -2,7 +2,7 @@
 	<div class="container">
 		{{> hostsChart}}
 		<br />
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-3">
 				{{> topOSList}}
@@ -12,6 +12,24 @@
 				{{> topSoftwareList}}
 			</div>
 			<div class="col-md-2"></div>
+		</div> -->
+
+		<div class="ui three column grid">
+			<div class="column">
+				<div class="ui horizontal segment">
+				{{> topOSList}}
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui horizontal segment">
+				<p>Top Users</p>
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui horizontal segment">
+				{{> topSoftwareList}}
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -33,37 +51,9 @@
 </template>
 
 <template name="osList">
-	<h1 class="ui header">Top OS Hits</h1>
-	<div class="ui list">
-		<a class="item">
-			<i class="right triangle icon"></i>
-			OS 1
-		</a>
-		<a class="item">
-			<i class="right triangle icon"></i>
-			OS 2
-		</a>
-		<a class="item">
-			<i class="right triangle icon"></i>
-			OS 3
-		</a>
-	</div>
+	<div id="os-pie-chart" style="min-width: 210px; height: 350px; max-width: 600px; margin: 0 auto"></div>
 </template>
 
 <template name="softwareList">
-	<h1 class="ui header">Top Software Hits</h1>
-	<div class="ui list">
-		<a class="item">
-			<i class="right triangle icon"></i>
-			Soft 1
-		</a>
-		<a class="item">
-			<i class="right triangle icon"></i>
-			Soft 2
-		</a>
-		<a class="item">
-			<i class="right triangle icon"></i>
-			Soft 3
-		</a>
-	</div>
+	<div id="software-pie-chart" style="min-width: 210px; height: 350px; max-width: 600px; margin: 0 auto"></div>
 </template>

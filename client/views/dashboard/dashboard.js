@@ -26,6 +26,96 @@ Template.dashboard.created = function () {
 
 Template.dashboard.rendered = function () {
 
+//OS pie chart
+$(function () {
+    $('#os-pie-chart').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 1,//null,
+            plotShadow: false
+        },
+        title: {
+            text: 'OS Breakdown'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'OS share',
+            data: [
+                ['Windows 7',   45.0],
+                ['OSX 10.10',       26.8],
+                {
+                    name: 'Linux 3.6',
+                    y: 12.8,
+                    sliced: true,
+                    selected: true
+                }
+            ]
+        }]
+    });
+});
+
+//Software pie chart
+$(function () {
+    $('#software-pie-chart').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 1,//null,
+            plotShadow: false
+        },
+        title: {
+            text: 'OS Breakdown'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'OS share',
+            data: [
+                ['Adobe Reader',   34.5],
+                ['Google Ultron',       26.8],
+                {
+                    name: 'Vista Virus',
+                    y: 12.8,
+                    sliced: true,
+                    selected: true
+                }
+            ]
+        }]
+    });
+});
+
+
+//bar chart
   $(function (){
     $('#hosts-chart-container').highcharts({
       chart:{
