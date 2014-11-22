@@ -1,5 +1,5 @@
 RecentActivityModel = {
-	owner = "",
-	createdAt = "",
-	action = ""
+	owner: "",
+	createdAt: "",
+	action: ""
 };
