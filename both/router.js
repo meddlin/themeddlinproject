@@ -40,6 +40,23 @@ Router.map(function() {
   this.route('hosts', {
     path: '/hosts'
   });
+  this.route('/dataentry/:_field', function() {
+    if(this.params._field === "host"){
+      console.log('go to newHost');
+      Meteor.subscribe('t_hosts');
+      this.render('newHost');
+    }else if(this.params._field === "os"){
+      console.log('go to newOS');
+      Meteor.subscribe('t_operating_systems');
+      this.render('newOs');
+    }else if(this.params._field === "software"){
+
+    }else if(this.params._field === "user"){
+
+    }else{
+      this.render(notFoundTemplate);
+    }
+  });
   this.route('osinfo', {
     path: '/osinfo'
   });

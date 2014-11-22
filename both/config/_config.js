@@ -14,6 +14,5 @@ this.Config = {
   blog: 'http://sourcefuge.com/tmproj',
   about: 'http://benjaminpeterjones.com',
   username: false,
-  homeRoute: '/dashboard',
-  socialMedia: [['http://facebook.com/benjaminpeterjones', 'facebook'], ['http://twitter.com/BenPeterJones', 'twitter'], ['http://github.com/yogiben', 'github']]
+  homeRoute: '/dashboard'
 };

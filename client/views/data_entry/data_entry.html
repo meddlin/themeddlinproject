@@ -1,5 +1,83 @@
-
-<template name="DataEntry">
-  client/views/data_entry/data_entry.html
+<template name="dataentry">
+  <h1>data entry</h1>
 </template>
 
+<template name="newHost">
+	{{#autoForm id="insertNewHost" type="insert" collection="THosts"}}
+	<!-- all the little form stuffs -->
+	<div class="form-group">
+		<label class="control-label title-color">{{afFieldLabelText name='ipv4Addr'}}</label>
+		{{> afFieldInput name="ipv4Addr"}}<br />
+
+		<label class="control-label title-color">{{afFieldLabelText name='ipv6Addr'}}</label>
+		{{> afFieldInput name="ipv6Addr"}}<br />
+
+		<label class="control-label title-color">{{afFieldLabelText name='macAddr'}}</label>
+		{{> afFieldInput name="macAddr"}}<br />
+
+		<label class="control-label title-color">{{afFieldLabelText name='nicVendor'}}</label>
+		{{> afFieldInput name="nicVendor"}}<br />
+
+		<!-- PORTS GO HERE!!! -->
+
+		<!-- OS Fingerprint goes here -->
+		<!-- <label class="control-label title-color">{{afFieldLabelText name='osFingerprint'}}</label>
+		{{> afFieldInput name="osFingerprint"}}<br /> -->
+
+		<label class="control-label title-color">{{afFieldLabelText name='region'}}</label>
+		{{> afFieldInput name="region"}}<br />
+
+		<label class="control-label title-color">{{afFieldLabelText name='country'}}</label>
+		{{> afFieldInput name="country"}}<br />
+
+		<label class="control-label title-color">{{afFieldLabelText name='latitude'}}</label>
+		{{> afFieldInput name="latitude"}}<br />
+
+		<label class="control-label title-color">{{afFieldLabelText name='longitude'}}</label>
+		{{> afFieldInput name="longitude"}}<br />
+	</div>
+	<!-- submit/cancel buttons -->
+	<div class="form-group">
+		<div class="ui huge buttons">
+			<div class="ui positive button" id="newHostSubmit">Submit</div>
+			<div class="or"></div>
+			<div class="ui button" id="newHostCancel">Cancel</div>
+		</div>
+  	</div>
+  	{{/autoForm}}
+</template>
+
+<template name="newOs">
+	{{#autoForm id="insertNewOperatingSystem" type="insert" collection="TOperatingSystems"}}
+	<div class="form-group">
+		<label class="control-label title-color">{{afFieldLabelText name='name'}}</label>
+		{{> afFieldInput name='name'}}
+		<br />
+
+		<label class="control-label title-color">{{afFieldLabelText name='platform'}}</label>
+		{{> afFieldInput name='platform'}}
+		<br />
+
+		<label class="control-label title-color">{{afFieldLabelText name='version'}}</label>
+		{{> afFieldInput name='version'}}
+		<br />
+	</div>
+
+	<!-- submit/cancel buttons -->
+	<div class="form-group">
+		<div class="ui huge buttons">
+			<div class="ui positive button" id="newOperatingSystemSubmit">Submit</div>
+			<div class="or"></div>
+			<div class="ui button" id="newOperatingSystemCancel">Cancel</div>
+		</div>
+  	</div>
+	{{/autoForm}}
+</template>
+
+<template name="newSoftware">
+
+</template>
+
+<template name="newUser">
+
+</template>

@@ -1,8 +1,8 @@
 
 /*****************************************************************************/
-/* DataEntry: Event Handlers and Helpersss .js*/
+/* dataentry: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-Template.DataEntry.events({
+Template.dataentry.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
@@ -11,7 +11,7 @@ Template.DataEntry.events({
    */
 });
 
-Template.DataEntry.helpers({
+Template.dataentry.helpers({
   /*
    * Example:
    *  items: function () {
@@ -21,15 +21,15 @@ Template.DataEntry.helpers({
 });
 
 /*****************************************************************************/
-/* DataEntry: Lifecycle Hooks */
+/* dataentry: Lifecycle Hooks */
 /*****************************************************************************/
-Template.DataEntry.created = function () {
+Template.dataentry.created = function () {
 };
 
-Template.DataEntry.rendered = function () {
+Template.dataentry.rendered = function () {
 };
 
-Template.DataEntry.destroyed = function () {
+Template.dataentry.destroyed = function () {
 };
 
 

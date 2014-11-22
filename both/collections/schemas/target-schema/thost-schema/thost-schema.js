@@ -2,17 +2,17 @@ THostSchema = new SimpleSchema({
 	ipv4Addr: {
 		type: String,
 		//regEx: \b(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}\b,
-		label: "IPv4",
+		label: "IPv4 Address",
 		optional: true
 	},
 	ipv6Addr: {
 		type: String,
-		label: "IPv6",
+		label: "IPv6 Address",
 		optional: true
 	},
 	macAddr: {
 		type: String,
-		label: "MAC",
+		label: "MAC Address",
 		optional: true
 	},
 	nicVendor: {
