@@ -110,12 +110,18 @@ AdminConfig =
       icon: 'comments',
       tableColumns: [
         {label: 'Owner', name: 'owner'},
+        {label: 'Email', name: 'ownerEmail'},
         {label: 'Created At', name: 'createdAt'},
         {label: 'Message', name: 'message'}
       ]
     },
     RecentActivity: {
-      icon: 'list'
+      icon: 'list',
+      tableColumns: [
+        {label: 'Owner', name: 'owner'},
+        {label: 'Created At', name: 'createdAt'},
+        {label: 'Action', name: 'action'}
+      ]
     },
     MimeUpload: {
       icon: 'cloud-upload'

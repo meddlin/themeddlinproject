@@ -1,0 +1,5 @@
+RecentActivityModel = {
+	owner = "",
+	createdAt = "",
+	action = ""
+};
