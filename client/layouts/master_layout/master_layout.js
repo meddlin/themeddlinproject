@@ -39,11 +39,14 @@
       //return false;
     },
 
-    'click #leftSideBarTrigger': function(event){
-      event.preventDefault();
-        $('#leftSideBarTrigger').sidebar('toggle');
+    'click #leftSideBarToggle': function(e){
+      e.preventDefault();
+      $('#leftSideBar').sidebar('toggle');
     },
-
+    'click #chatBarToggle': function(e){
+      e.preventDefault();
+      $('#chatBar').sidebar('toggle');
+    },
 
    'keydown input#send' : function (event){
       if (event.which == 13){

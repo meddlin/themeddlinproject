@@ -2,26 +2,35 @@
 	<div class="layout master-layout {{$.Session.get 'sidebar'}}">
 		{{>header}}
 		<div class="container close-navbar" id="mainArea">
+
+			{{#if currentUser}}
+				<div class="row">
+					<div class="col-md-1">
+						<div class="ui black huge right attached button" id="leftSideBarToggle">
+						SIDEBAR
+						</div>
+						{{> leftSideBar}}
+					</div>
+					<div class="col-md-10"></div>
+					<div class="col-md-1">
+						<div class="ui black huge left attached button" id="chatBarToggle">
+						CHATBAR
+						</div>
+						{{> chatBar}}
+					</div>
+				</div>
+			{{/if}}
 			<div class="col-md-11">
 			{{> yield }}
 			</div>
-			{{#if currentUser}}
-				{{> leftSideBar}}
-				<div class="col-md-1">
-					<div class="opener">
-						<font color="#ffffff"><span class="glyphicon glyphicon-comment"></span><p>Toggle</p><p>Toggle2</p></font>
-					</div>
-				    <div id="chatBox">
-					    {{> chat}}
-					</div>
-			    </div>
-			{{/if}}
 		</div>
 		<div class="push"></div>
 	</div>
 	{{> footer}}
 	{{> autoformModals}}
 </template>
+
+<!-- /***********/ SUPPLEMENT TEMPLATES BELOW /************/ -->
 
 <template name="chat">
 		{{> chatBox}}
@@ -53,25 +62,13 @@
 </template>
 
 <template name="leftSideBar">
-	<div class="ui thin sidebar">
-		<a class="item">
-		    <i class="home icon"></i>
-		    Home
-	  	</a>
-		<a class="active item">
-		    <i class="heart icon"></i>
-		    Current Section
-		  </a>
-		  <a class="item">
-		    <i class="facebook icon"></i>
-		    Like us on Facebook
-		  </a>
-		  <div class="item">
-		    <b>More</b>
-		    <div class="menu">
-		      <a class="item">About</a>
-		      <a class="item">Contact Us</a>
-		    </div>
-		  </div>
+	<div class="ui thin sidebar" id="leftSideBar">
+
+	</div>
+</template>
+
+<template name="chatBar">
+	<div class="ui very wide right sidebar" id="chatBar">
+		{{> chat}}
 	</div>
 </template>
