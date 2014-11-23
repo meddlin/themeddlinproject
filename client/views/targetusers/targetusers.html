@@ -1,5 +1,55 @@
 
 <template name="targetusers">
-  client/views/targetusers/targetusers.html
+  {{> usersTable}}
 </template>
 
+<template name="usersTable">
+	<table class="ui inverted table segment">
+		{{> usersTableHeader}}
+		{{> usersTableBody}}
+  	</table>
+</template>
+
+<template name="usersTableHeader">
+	<thead>
+		<tr><th>Username</th>
+		    <th>First | Last</th>
+		    <th>Email</th>
+		    <th>Password</th>
+		    <th>PGP Key?</th>
+	  	</tr>
+  </thead>
+</template>
+
+<template name="usersTableFooter">
+	<tfoot>
+	    <tr>
+	    	<th>3 People</th>
+		    <th>2 Approved</th>
+		    <th></th>
+	  </tr>
+  </tfoot>
+</template>
+
+<template name="usersTableBody">
+	<tbody>
+		<tr>
+	      <td>kookyuser</td>
+	      <td>Jack Sparrow</td>
+	      <td>onewickedwench@EITC.com</td>
+	      <td>pirate</td>
+	      <td>NO</td>
+	    </tr>
+	    <tr>
+	      <td>mulch</td>
+	      <td>John Doe</td>
+	      <td>the.legend@email.com</td>
+	      <td>adsf0923m  sd</td>
+	      <th>YES</th>
+	    </tr>
+	</tbody>
+</template>
+
+<template name="usersTableRow">
+<!-- //TODO: the {{}} stuff goes here once we have something being pulled from the collection via JS -->
+</template>
