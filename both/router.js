@@ -42,17 +42,17 @@ Router.map(function() {
   });
   this.route('/dataentry/:_field', function() {
     if(this.params._field === "host"){
-      console.log('go to newHost');
       Meteor.subscribe('t_hosts');
       this.render('newHost');
     }else if(this.params._field === "os"){
-      console.log('go to newOS');
       Meteor.subscribe('t_operating_systems');
       this.render('newOs');
     }else if(this.params._field === "software"){
-
+      Meteor.subscribe('t_softwares');
+      this.render('newSoftware');
     }else if(this.params._field === "user"){
-
+      Meteor.subscribe('t_users');
+      this.render('newUser');
     }else{
       this.render(notFoundTemplate);
     }
