@@ -4,6 +4,14 @@ SERVER STARTUP FUNCTIONS
 	functions that are defined within this file can be accessed.
 */
 
+//BEGIN Voltage configuration
+/* -- by default any logged in user can edit the Voltage pages
+Voltage.config({
+    adminRole: 'admin',
+    adminGroup: 'qa'
+});*/
+//END Voltage configuration
+
 var port = {
 	number: "80",
 	service: "serv",

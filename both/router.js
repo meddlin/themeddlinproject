@@ -58,13 +58,28 @@ Router.map(function() {
     }
   });
   this.route('osinfo', {
-    path: '/osinfo'
-  });
-  this.route("pushpins", {
-    path: "/pushpins"
+    path: '/osinfo',
+    waitOn: function(){
+      Meteor.subscribe('voltage_os');
+    },
+    action: function(){
+      Voltage.render(this);
+    }
   });
   this.route("softwareinfo", {
-    path: "/softwareinfo"
+    path: "/softwareinfo",
+    waitOn: function(){
+      Meteor.subscribe('voltage_software');
+    }
+  });
+  this.route("nettoolinfo", {
+    path: "/nettooolinfo",
+    waitOn: function(){
+      Meteor.subscribe('voltage_nettool');
+    }
+  })
+  this.route("pushpins", {
+    path: "/pushpins"
   });
   this.route("targetusers", {
     path: "/targetusers"
