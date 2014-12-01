@@ -5,9 +5,13 @@
   	{{> afQuickField name="fileId"}}
   	<button type="submit" id="uploadButton" class="btn btn-primary">Upload</button>
   {{/autoForm}} -->
-  	<form name="uploadForm">
-		<input id="fileInput" type="file" multiple="multiple">
+  <form name="uploadForm">
+    {{> fileSelect}}
+    <br />
+    <!-- <div id="upload-button" class="ui inverted blue button">Upload</div> -->
+    {{> selectDropdown}}
 	</form>
+  <br />
 	<button id="removeAll">Remove All</button>
 	<br />
   	<h4 class="title-color">Files</h4>
@@ -15,7 +19,7 @@
 </template>
 
 <template name="files">
-	<div id="files" class="title-color">
+	<div id="files">
 	<table class="ui table segment" id="example">
 
     <thead>
@@ -43,4 +47,28 @@
     </table>
 
 	</div>
+</template>
+
+<template name="fileSelect">
+  <div class="ui fluid icon input">
+    <input placeholder="Select file(s)..." id="fileInput" type="file" multiple="multiple">
+    <i class="search icon"></i>
+  </div>
+</template>
+
+<template name="selectDropdown">
+  <select name="recon-ng-info-type" class="ui dropdown" id="select-reconng-info">
+    <option value="">Recon-ng Table</option>
+    <option value="companies">Companies</option>
+    <option value="contacts">Contacts</option>
+    <option value="credentials">Credentials</option>
+    <option value="domains">Domains</option>
+    <option value="hosts">Hosts</option>
+    <option value="leaks">Leaks</option>
+    <option value="locations">Locations</option>
+    <option value="netblocks">Netblocks</option>
+    <option value="ports">Ports</option>
+    <option value="pushpins">Pushpins</option>
+    <option value="vulnerabilities">Vulnerabilities</option>
+  </select>
 </template>

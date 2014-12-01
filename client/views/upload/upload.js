@@ -16,6 +16,10 @@ Template.upload.events({
       Meteor.call('removeAllFiles');
     },
 
+    /*'click #uplaoad-button': function(event){
+      $('#fileInput').change();
+    },*/
+
    'change #fileInput': function (event) {
     event.preventDefault();
     var fileReader = new FileReader(); //used for reading DOM File objects into strings
@@ -30,12 +34,10 @@ Template.upload.events({
           complete: function(results){
             console.log("Stringify the results...");
             console.log("results: " + console.log(results));
-            var fileData = results.data;
-            for (var i = 0; i < fileData.length; i++){
-              for (var j = 0; j < fileData[i].length; j++){
-                console.log(fileData[i][j]);
-              }
-            }
+            //var fileData = results.data;
+            //parseContactsReconng(results.data);
+            /* info detection goes here */
+            console.log(results.data[0]);
           }
         });
       }else if(file.type == "text/xml"){ /* XML PARSER */
@@ -71,6 +73,10 @@ Template.upload.helpers({
    */
 });
 
+Template.files.files = function() {
+  return MimeUpload.find();
+};
+
 /*****************************************************************************/
 /* upload: Lifecycle Hooks */
 /*****************************************************************************/
@@ -78,6 +84,7 @@ Template.upload.created = function () {
 };
 
 Template.upload.rendered = function () {
+  $('#select-reconng-info').dropdown();
 };
 
 Template.upload.destroyed = function () {

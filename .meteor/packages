@@ -41,7 +41,6 @@ meteorhacks:fast-render
 mrt:moment
 natestrauser:x-editable-bootstrap
 peerlibrary:xml2js
-simison:bootstrap3-less
 aldeed:autoform-bs-datepicker
 joshowens:accounts-entry
 multiply:iron-router-progress
@@ -54,4 +53,3 @@ awatson1978:semantic-ui-sidebar
 alethes:pages
 nooitaf:semantic-ui-less
 hellogerard:voltage
-
