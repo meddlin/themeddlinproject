@@ -20,7 +20,7 @@ var tempPort = {
 }
 
 parsePortsReconng = function(data){
-	for(int i = 0; i < data.length; i++){
+	for(var i = 0; i < data.length; i++){
 		tempPort.ip = data[i][0];
 		tempPort.host = data[i][1];
 		tempPort.port = data[i][2];

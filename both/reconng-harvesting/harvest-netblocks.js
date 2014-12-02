@@ -14,7 +14,7 @@ var tempNetblock = {
 };
 
 parseNetblocksReconng = function(data) {
-	for (int i = 0; i < data.length; i++){
+	for (var i = 0; i < data.length; i++){
 		tempNetblock.nb = data[i][0];
 		tempNetblock.module = data[i][1];
 	}
