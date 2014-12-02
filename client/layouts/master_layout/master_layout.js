@@ -69,6 +69,7 @@ Template.masterLayout.created = function () {
 
 Template.masterLayout.rendered = function () {
   $('.ui.thin.sidebar').sidebar();
+  $('.ui.dropdown').dropdown();
 };
 
 Template.masterLayout.destroyed = function () {

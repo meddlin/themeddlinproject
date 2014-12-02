@@ -1,35 +1,47 @@
 <template name="masterLayout">
 	<div class="layout master-layout {{$.Session.get 'sidebar'}}">
 		{{>header}}
+		{{#if currentUser}}
+			{{> sidebarMenus}}
+		{{/if}}
+
 		<div class="container close-navbar" id="mainArea">
-
-			{{#if currentUser}}
-				<div class="row">
-					<div class="col-md-1">
-						<div class="ui black huge right attached button" id="leftSideBarToggle"><i class="align justify icon"></i></div>
-						{{> leftSideBar}}
-					</div>
-					<div class="col-md-8"></div>
-					<div class="col-md-1">
-						<div class="ui black huge left attached button" id="chatBarToggle">
-						CHATBAR
-						</div>
-						{{> chatBar}}
-					</div>
-				</div>
-			{{/if}}
-
-			<div class="col-md-11">
-			{{> yield }}
+			<div class="col-md-12">
+				{{> yield }}
 			</div>
 		</div>
-		<div class="push"></div>
+
 	</div>
 	{{> footer}}
 	{{> autoformModals}}
 </template>
 
 <!-- /***********/ SUPPLEMENT TEMPLATES BELOW /************/ -->
+
+<template name="sidebarMenus">
+	<div class="row">
+		<div class="ui grid">
+			<div class="left floated two wide column">
+				<div class="ui black huge right attached button" id="leftSideBarToggle">
+					<i class="align justify icon"></i>
+				</div>
+				{{> leftSideBar}}
+			</div>
+			<div class="right floated one wide column">
+				<div class="ui black huge left attached button" id="chatBarToggle">
+					<i class="comment icon"></i>
+				</div>
+				{{> chatBar}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="chatBar">
+	<div class="ui right sidebar" id="chatBar">
+		{{> chat}}
+	</div>
+</template>
 
 <template name="chat">
 		{{> chatBox}}
@@ -84,11 +96,5 @@
 		    </div>
 		  </div>
 		</div>
-	</div>
-</template>
-
-<template name="chatBar">
-	<div class="ui right sidebar" id="chatBar">
-		{{> chat}}
 	</div>
 </template>
