@@ -39,6 +39,16 @@ TUserSchema = new SimpleSchema({
 		label: "Password Hash",
 		optional: true
 	},
+	type: {
+		type: String,
+		label: "Type",
+		optional: true
+	},
+	leak: {
+		type: String,
+		label: "Leak",
+		optional: true
+	},
 	hasPGPKey: {
 		type: Boolean,
 		label: "PGP Key",

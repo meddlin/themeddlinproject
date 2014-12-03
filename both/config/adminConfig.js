@@ -10,10 +10,12 @@ AdminConfig =
   adminEmails: ['user1@email.com', 'admin@email.com'],
   collections: {
     NetworkTools: {
-      icon: 'sitemap'
+      icon: 'sitemap',
+      color: 'red'
     },
     OperatingSystems: {
       icon: 'desktop',
+      color: 'red',
       tableColumns: [
         {label: 'Name', name: 'name'},
         {label: 'Owner', name: 'owner'},
@@ -29,6 +31,7 @@ AdminConfig =
     },
     Softwares: {
       icon: 'cubes',
+      color: 'red',
       tableColumns: [
         {label: 'Name', name: 'name'},
         {label: 'Owner', name: 'owner'},
@@ -156,7 +159,9 @@ AdminConfig =
         {label: 'Username', name: 'username'},
         {label: 'Email', name: 'email'},
         {label: 'Password', name: 'password'},
-        {label: 'Hash', name: 'passhash'},
+        {label: 'Hash', name: 'passHash'},
+        {label: 'Type', name: 'type'},
+        {label: 'Leak', name: 'leak'},
         {label: 'PGP Key', name: 'hasPGPKey'},
         {label: 'Region', name: 'region'},
         {label: 'Country', name: 'country'},
@@ -171,6 +176,7 @@ AdminConfig =
     },
     Chat: {
       icon: 'comments',
+      color: 'green',
       tableColumns: [
         {label: 'Owner', name: 'owner'},
         {label: 'Email', name: 'ownerEmail'},
@@ -180,6 +186,7 @@ AdminConfig =
     },
     RecentActivity: {
       icon: 'list',
+      color: 'green',
       tableColumns: [
         {label: 'Owner', name: 'owner'},
         {label: 'Created At', name: 'createdAt'},
@@ -187,19 +194,18 @@ AdminConfig =
       ]
     },
     MimeUpload: {
-      icon: 'cloud-upload'
+      icon: 'cloud-upload',
+      color: 'yellow'
     },
     UserDataLogs: {
-      icon: 'tasks'
+      icon: 'tasks',
+      color: 'green'
     },
   },
   dashboard: {
     homeUrl: '/dashboard',
     skin: "black"
-  }/*,
-  autoForm: {
-    omitFields: ['createdAt', 'updatedAt']
-  }*/
+  }
 };
 
 if (Meteor.isClient) {

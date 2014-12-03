@@ -1,5 +1,3 @@
-/*FileEntry = new Meteor.Collection("file_entry");*/
-
 MimeUpload = new FS.Collection('mime_upload', {
 	stores: [new FS.Store.GridFS("upload_master")],
 	filter: {
@@ -13,19 +11,6 @@ MimeUpload = new FS.Collection('mime_upload', {
 		}
 	}
 });
-
-/*FileEntry.attachSchema(new SimpleSchema({
-	name: {
-		type: String
-	},
-	fileId: {
-		type: String,
-		autoform: {
-			type: "cfs-file",
-			collection: "mime_upload"
-		}
-	}
-}));*/
 
 /*
  * Add query methods like this:
