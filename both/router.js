@@ -7,7 +7,13 @@ Router.configure({
   progressSpinner: false
 });
 
-Router.onBeforeAction("loading");
+Router.onBeforeAction(function(pause){
+  if(!this.ready()){
+    this.render('loading');
+    pause();
+  }
+});
+
 Router.map(function() {
   this.route("home", {
     path: "/",
@@ -15,17 +21,15 @@ Router.map(function() {
   });
   this.route("dashboard", {
     path: "/dashboard",
-    waitOn: function() {
-      return [Meteor.subscribe('posts'), Meteor.subscribe('favorites'), Meteor.subscribe('comments')];
+    waitOn: {  //populates wait list with these subscriptions
+      return [
+        Meteor.subscribe('t_softwares'),
+        Meteor.subscribe('t_operating_systems'),
+        Meteor.subscribe('t_hosts')
+      ]
     },
-    data: function() {
-      return {
-        Posts: Posts.find({}, {
-          sort: {
-            createdAt: -1
-          }
-        }).fetch()
-      };
+    action: function() {  //runs once this.ready() == true
+      this.render('dashboard');
     }
   });
   this.route("profile", {
