@@ -369,6 +369,59 @@
 	{{/autoForm}}
 </template>
 
+<template name="newPushpin">
+	<h1 class="ui header title-color">
+		<i class="settings icon"></i>
+		<div class="content">
+			New Pushpin (Target)
+		</div>
+	</h1>
+
+	{{#autoForm id="insertNewTPushpin" type="insert" collection="TPushpins"}}
+	<div class="form-group">
+		<label class="control-label title-color">{{afFieldLabelText name='source'}}</label>
+		{{> afFieldInput name='source'}}
+		<br />
+		<label class="control-label title-color">{{afFieldLabelText name='screenName'}}</label>
+		{{> afFieldInput name='screenName'}}
+		<br />
+		<label class="control-label title-color">{{afFieldLabelText name='profileName'}}</label>
+		{{> afFieldInput name='profileName'}}
+		<br />
+		<label class="control-label title-color">{{afFieldLabelText name='profileUrl'}}</label>
+		{{> afFieldInput name='profileUrl'}}
+		<br />
+		<label class="control-label title-color">{{afFieldLabelText name='mediaUrl'}}</label>
+		{{> afFieldInput name='mediaUrl'}}
+		<br />
+		<label class="control-label title-color">{{afFieldLabelText name='thumbUrl'}}</label>
+		{{> afFieldInput name='thumbUrl'}}
+		<br />
+		<label class="control-label title-color">{{afFieldLabelText name='message'}}</label>
+		{{> afFieldInput name='message'}}
+		<br />
+		<label class="control-label title-color">{{afFieldLabelText name='latitude'}}</label>
+		{{> afFieldInput name='latitude'}}
+		<br />
+		<label class="control-label title-color">{{afFieldLabelText name='longitude'}}</label>
+		{{> afFieldInput name='longitude'}}
+		<br />
+		<label class="control-label title-color">{{afFieldLabelText name='time'}}</label>
+		{{> afFieldInput name='time'}}
+		<br />
+	</div>
+
+	<!-- submit/cancel buttons -->
+	<div class="form-group">
+		<div class="ui huge buttons">
+			<div class="ui positive button" id="newPushpinSubmit">Submit</div>
+			<div class="or"></div>
+			<div class="ui button" id="newPushpinCancel">Cancel</div>
+		</div>
+  	</div>
+	{{/autoForm}}
+</template>
+
 <template name="newVuln">
 	<h1 class="ui header title-color">
 		<i class="settings icon"></i>

@@ -9,13 +9,15 @@ RECON-NG SCHEMA OUTPUT
 */
 
 var tempNetblock = {
-	nb: "",
+	netblock: "",
 	module: ""
 };
 
 parseNetblocksReconng = function(data) {
 	for (var i = 0; i < data.length; i++){
-		tempNetblock.nb = data[i][0];
-		tempNetblock.module = data[i][1];
+		TNetblockModel.netblock = data[i][0];
+		TNetblockModel.module = data[i][1];
+
+		TNetblocks.insert(TNetblockModel);
 	}
 };

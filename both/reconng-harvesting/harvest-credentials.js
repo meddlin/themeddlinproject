@@ -15,7 +15,7 @@ RECON-NG SCHEMA OUPTUT
 var tempCredential = {
   username: "",
   password: "",
-  hash: "",
+  passHash: "",
   type: "",
   leak: "",
   module: ""
@@ -23,13 +23,15 @@ var tempCredential = {
 
 parseCredentialsReconng = function(data){
   for(var i = 0; i < data.length; i++){
-    tempCredential.username = data[i][0];
-    tempCredential.password = data[i][1];
-    tempCredential.hash = data[i][2];
-    tempCredential.type = data[i][3];
-    tempCredential.leak = data[i][4];
-    tempCredential.module = data[i][5];
-    testParsing();
+    TUserModel.username = data[i][0];
+    TUserModel.password = data[i][1];
+    TUserModel.passHash = data[i][2];
+    TUserModel.type = data[i][3];
+    TUserModel.leak = data[i][4];
+    TUserModel.module = data[i][5];
+
+    TUsers.insert(TUserModel);
+    /*testParsing();*/
   }
 };
 

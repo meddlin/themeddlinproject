@@ -11,17 +11,19 @@ RECON-NG SCHEMA OUTPUT
 */
 
 var tempLocation = {
-	lat: "",
-	longit: "",
-	streetAddr: "",
+	latitude: "",
+	longitude: "",
+	streetAddress: "",
 	module: ""
 };
 
 parseLocationReconng = function(data){
 	for(var i = 0; i < data.length; i++){
-	    tempLocation.lat = data[i][0];
-	    tempLocation.longit = data[i][1];
-	    tempLocation.streetAddr = data[i][2];
-	    tempLocation.module = data[i][3];
+	    TLocationModel.lat = data[i][0];
+	    TLocationModel.longit = data[i][1];
+	    TLocationModel.streetAddr = data[i][2];
+	    TLocationModel.module = data[i][3];
+
+	    TLocations.insert(TLocationModel);
 	}
 };

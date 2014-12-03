@@ -15,7 +15,9 @@ var tempDomain = {
 
 parseDomainsReconng = function(data){
 	for(var i = 0; i < data.length; i++){
-	    tempDomain.domain = data[i][0];
-	    tempDomain.module = data[i][1];
+	    TDomainModel.domain = data[i][0];
+	    TDomainModel.module = data[i][1];
+
+	    TDomains.insert(TDomainModel);
 	}
 }

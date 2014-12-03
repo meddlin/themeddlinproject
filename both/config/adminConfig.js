@@ -137,6 +137,22 @@ AdminConfig =
         {label: 'Module', name: 'module'}
       ]
     },
+    TPushpins: {
+      icon: 'thumb-tack',
+      tableColumns: [
+        {label: 'Source', name: 'source'},
+        {label: 'Screen Name', name: 'screenName'},
+        {label: 'Profile Name', name: 'profileName'},
+        {label: 'Profile URL', name: 'profileUrl'},
+        {label: 'Media URL', name: 'mediaUrl'},
+        {label: 'Thumb URL', name: 'thumbUrl'},
+        {label: 'Message', name: 'message'},
+        {label: 'Latitude', name: 'latitude'},
+        {label: 'Longitude', name: 'longitude'},
+        {label: 'Time', name: 'time'},
+        {label: 'Module', name: 'module'}
+      ]
+    },
     TVulns: {
       icon: 'fire',
       tableColumns: [

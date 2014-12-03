@@ -32,15 +32,17 @@ var tempPushpin = {
 
 parsePushpinsReconng = function(data){
   for(var i = 0; i < data.length; i++){
-    tempPushpin.screenName = data[i][0];
-    tempPushpin.profileName = data[i][1];
-    tempPushpin.profileUrl = data[i][2];
-    tempPushpin.mediaUrl = data[i][3];
-    tempPushpin.thumbUrl = data[i][4];
-    tempPushpin.message = data[i][5];
-    tempPushpin.latitude = data[i][6];
-    tempPushpin.longitude = data[i][7];
-    tempPushpin.time = data[i][8];
-    tempPushpin.module = data[i][9];
+    TPushpinModel.screenName = data[i][0];
+    TPushpinModel.profileName = data[i][1];
+    TPushpinModel.profileUrl = data[i][2];
+    TPushpinModel.mediaUrl = data[i][3];
+    TPushpinModel.thumbUrl = data[i][4];
+    TPushpinModel.message = data[i][5];
+    TPushpinModel.latitude = data[i][6];
+    TPushpinModel.longitude = data[i][7];
+    TPushpingModel.time = data[i][8];
+    TPushpingModel.module = data[i][9];
+
+    TPushpins.insert(TPushpinModel);
   }
 };

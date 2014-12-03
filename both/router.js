@@ -70,6 +70,9 @@ Router.map(function() {
     }else if(this.params._field === "netblock"){
       Meteor.subscribe('t_netblocks');
       this.render('newNetblock');
+    }else if(this.params._field === "pushpin"){
+      Meteor.subscribe('t_pushpins');
+      this.render('newPushpin');
     }else if(this.params._field === "vuln"){
       Meteor.subscribe('t_vulns');
       this.render('newVuln');

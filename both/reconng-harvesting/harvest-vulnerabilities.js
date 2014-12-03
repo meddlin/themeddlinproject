@@ -25,12 +25,14 @@ var tempVulnerability = {
 
 parseVulnerabilitiesReconng = function(data){
   for(var i = 0; i < data.length; i++){
-    tempVulnerability.host = data[i][0];
-    tempVulnerability.reference = data[i][1];
-    tempVulnerability.example = data[i][2];
-    tempVulnerability.publishDate = data[i][3];
-    tempVulnerability.category = data[i][4];
-    tempVulnerability.status = data[i][5];
-    tempVulnerability.module = data[i][6];
+    TVulnModel.host = data[i][0];
+    TVulnModel.reference = data[i][1];
+    TVulnModel.example = data[i][2];
+    TVulnModel.publishDate = data[i][3];
+    TVulnModel.category = data[i][4];
+    TVulnModel.status = data[i][5];
+    TVulnModel.module = data[i][6];
+
+    TVulns.insert(TVulnModel);
   }
 };

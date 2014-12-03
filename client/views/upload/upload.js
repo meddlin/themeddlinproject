@@ -4,6 +4,7 @@
 /*****************************************************************************/
 var timestamp = moment();
 var globalFiles;
+var reconngSelected;
 
 Template.upload.events({
    'click #removeAll': function(event, template){
@@ -21,6 +22,7 @@ Template.upload.events({
     if(globalFiles == undefined){
       toastr.error("Choose a file first.", "Error!");
     }
+    reconngSelected = $('#select-reconng-info :selected').text();
 
     for (var i = 0, ln = globalFiles.length; i < ln; i++) {
       if (globalFiles[i].type == "text/csv"){
@@ -81,32 +83,29 @@ var csvHandoff = function(file){
   console.log("csv parsing goes here");
   Papa.parse(file, {
     complete: function(results){
-      var dropText = $('#select-reconng-info :selected').text();
-      console.log("dropText: ");
-      console.log(dropText);
 
       /* RECON-NG PARSING */
-      if(dropText == "Companies"){
+      if(reconngSelected == "Companies"){
         parseCompaniesReconng(results.data);
-      }else if(dropText == "Contacts"){
+      }else if(reconngSelected == "Contacts"){
         parseContactsReconng(results.data);
-      }else if(dropText == "Credentials"){
+      }else if(reconngSelected == "Credentials"){
         parseCredentialsReconng(results.data);
-      }else if(dropText == "Domains"){
+      }else if(reconngSelected == "Domains"){
         parseDomainsReconng(results.data);
-      }else if(dropText == "Hosts"){
+      }else if(reconngSelected == "Hosts"){
         parseHostsReconng(results.data);
-      }else if(dropText == "Leaks"){
+      }else if(reconngSelected == "Leaks"){
         parseLeaksReconng(results.data);
-      }else if(dropText == "Locations"){
+      }else if(reconngSelected == "Locations"){
         parseLocationsReconng(results.data);
-      }else if(dropText == "Netblocks"){
+      }else if(reconngSelected == "Netblocks"){
         parseNetblocksReconng(results.data);
-      }else if(dropText == "Ports"){
+      }else if(reconngSelected == "Ports"){
         parsePortsReconng(reuslts.data);
-      }else if(dropText == "Pushpins"){
+      }else if(reconngSelected == "Pushpins"){
         parsePushpinsReconng(results.data);
-      }else if(dropText == "Vulnerabilities"){
+      }else if(reconngSelected == "Vulnerabilities"){
         parseVulnerabilitiesReconng(results.data);
       }
     }

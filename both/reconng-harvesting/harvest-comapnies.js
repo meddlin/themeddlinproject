@@ -16,10 +16,12 @@ var tempCompany = {
 
 parseCompaniesReconng = function(data) {
 	for(var i = 0; i < data.length; i++){
-		tempCompany.company = data[i][0];
-		tempCompany.description = data[i][1];
-		tempCompany.module = data[i][2];
-		testParsing();
+		TCompanyModel.company = data[i][0];
+		TCompanyModel.description = data[i][1];
+		TCompanyModel.module = data[i][2];
+		/*testParsing();*/
+		TCompanies.insert(TCompanyModel);
+		//toastr.success("TCompany insert");
 	}
 };
 

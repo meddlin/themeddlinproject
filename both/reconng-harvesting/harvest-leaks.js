@@ -45,22 +45,24 @@ var tempLeak = {
 
 parseLeaksReconng = function(data){
   for(var i = 0; i < data.length; i++){
-    tempLeak.leak = data[i][0];
-    tempLeak.description = data[i][1];
-    tempLeak.source = data[i][2];
-    tempLeak.leaktype = data[i][3];
-    tempLeak.title = data[i][4];
-    tempLeak.importDate = data[i][5];
-    tempLeak.leakDate = data[i][6];
-    tempLeak.attackers = data[i][7];
-    tempLeak.numEntries = data[i][8];
-    tempLeak.score = data[i][9];
-    tempLeak.numDomainsAffected = data[i][10];
-    tempLeak.attackMethod = data[i][11];
-    tempLeak.targetIndustries = data[i][12];
-    tempLeak.passwordHash = data[i][13];
-    tempLeak.targets = data[i][14];
-    tempLeak.mediaRefs = data[i][15];
-    tempLeak.module = data[i][16];
+    TLeakModel.leak = data[i][0];
+    TLeakModel.description = data[i][1];
+    TLeakModel.source = data[i][2];
+    TLeakModel.leaktype = data[i][3];
+    TLeakModel.title = data[i][4];
+    TLeakModel.importDate = data[i][5];
+    TLeakModel.leakDate = data[i][6];
+    TLeakModel.attackers = data[i][7];
+    TLeakModel.numEntries = data[i][8];
+    TLeakModel.score = data[i][9];
+    TLeakModel.numDomainsAffected = data[i][10];
+    TLeakModel.attackMethod = data[i][11];
+    TLeakModel.targetIndustries = data[i][12];
+    TLeakModel.passwordHash = data[i][13];
+    TLeakModel.targets = data[i][14];
+    TLeakModel.mediaRefs = data[i][15];
+    TLeakModel.module = data[i][16];
+
+    TLeaks.insert(TLeakModel);
   }
 };
