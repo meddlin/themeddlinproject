@@ -19,5 +19,10 @@ parseCompaniesReconng = function(data) {
 		tempCompany.company = data[i][0];
 		tempCompany.description = data[i][1];
 		tempCompany.module = data[i][2];
+		testParsing();
 	}
 };
+
+var testParsing = function(){
+	console.log(tempCompany);
+}

@@ -35,7 +35,6 @@ maazalik:highcharts
 cfs:filesystem
 cfs:graphicsmagick
 pfafman:nvd3
-chrismbeckett:toastr
 harrison:papa-parse
 meteorhacks:fast-render
 mrt:moment
@@ -53,3 +52,5 @@ awatson1978:semantic-ui-sidebar
 alethes:pages
 nooitaf:semantic-ui-less
 hellogerard:voltage
+chrismbeckett:toastr
+

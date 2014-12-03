@@ -23,7 +23,7 @@ var tempVulnerability = {
   module: ""
 }
 
-parseVulnerabilityReconng = function(data){
+parseVulnerabilitiesReconng = function(data){
   for(var i = 0; i < data.length; i++){
     tempVulnerability.host = data[i][0];
     tempVulnerability.reference = data[i][1];

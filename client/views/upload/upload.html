@@ -1,19 +1,38 @@
 
 <template name="upload">
-  <!-- {{#autoForm id="uploadFile" type="insert" collection="FileEntry" doc=User}}
-  	{{> afQuickField name="name"}}
-  	{{> afQuickField name="fileId"}}
-  	<button type="submit" id="uploadButton" class="btn btn-primary">Upload</button>
-  {{/autoForm}} -->
   <form name="uploadForm">
-    {{> fileSelect}}
+
+    <div class="ui grid">
+      <div class="two column row">
+        <div class="left floated column">
+          {{> fileSelect}}
+        </div>
+        <!-- <div class="column"></div> -->
+        <div class="column">
+          {{> selectDropdown}}
+        </div>
+      </div>
+      <div class="three column row">
+        <div class="column">
+          {{> uploadButton}}
+        </div>
+        {{#if isInRole 'admin'}}
+        <div class="column">
+          <div id="removeAll" class="ui inverted red button">Remove All Files</div>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+
+    <!-- {{> fileSelect}}
     <br />
-    <!-- <div id="upload-button" class="ui inverted blue button">Upload</div> -->
-    {{> selectDropdown}}
+    <div id="upload-button" class="ui inverted blue button">Upload</div>
+    <br />
+    {{> selectDropdown}} -->
 	</form>
-  <br />
-	<button id="removeAll">Remove All</button>
-	<br />
+
+	<!-- <button id="removeAll">Remove All Files</button>
+	<br /> -->
   	<h4 class="title-color">Files</h4>
 	{{>files}}
 </template>
@@ -27,16 +46,10 @@
           <th>Name</th>
           <th>Size (bytes)</th>
           <th>Extension</th>
-          <!-- <th>Platform(s)</th>
-          <th>Engine version</th>
-          <th>CSS grade</th> -->
         </tr>
     </thead>
     <tbody>
 		{{#each files}}
-			<!-- stuff to do on each iteration goes here -->
-			<!-- <p>Orig name: {{this.name}}</p>
-			<p>Orig extension: {{this.extension}}</p> -->
 		<tr class="gradeX">
           <td>{{this.name}}</td>
           <td>{{this.size}}</td>
@@ -56,9 +69,13 @@
   </div>
 </template>
 
+<template name="uploadButton">
+  <div id="upload-button" class="ui inverted blue button">Upload</div>
+</template>
+
 <template name="selectDropdown">
-  <select name="recon-ng-info-type" class="ui dropdown" id="select-reconng-info">
-    <option value="">Recon-ng Table</option>
+  <select name="recon-ng-info-type" class="ui search selection dropdown" id="select-reconng-info">
+    <option value="default">Recon-ng Table</option>
     <option value="companies">Companies</option>
     <option value="contacts">Contacts</option>
     <option value="credentials">Credentials</option>

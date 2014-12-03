@@ -29,5 +29,10 @@ parseCredentialsReconng = function(data){
     tempCredential.type = data[i][3];
     tempCredential.leak = data[i][4];
     tempCredential.module = data[i][5];
+    testParsing();
   }
 };
+
+var testParsing = function(){
+  console.log(tempCredential);
+}

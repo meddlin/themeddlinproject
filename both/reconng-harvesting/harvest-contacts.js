@@ -35,5 +35,12 @@ parseContactsReconng = function(data) {
     tempContact.region = data[i][5];
     tempContact.country = data[i][6];
     tempContact.module = data[i][7];
+    testParsing();
   }
+
 };
+
+var testParsing = function(){
+  console.log(tempContact);
+}
+

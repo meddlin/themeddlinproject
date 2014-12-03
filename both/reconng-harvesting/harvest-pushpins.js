@@ -30,7 +30,7 @@ var tempPushpin = {
   module: ""
 }
 
-parsePushpinReconng = function(data){
+parsePushpinsReconng = function(data){
   for(var i = 0; i < data.length; i++){
     tempPushpin.screenName = data[i][0];
     tempPushpin.profileName = data[i][1];
