@@ -7,10 +7,11 @@ Router.configure({
   progressSpinner: false
 });
 
-Router.onBeforeAction(function(pause){
+Router.onBeforeAction(function(){
   if(!this.ready()){
     this.render('loading');
-    pause();
+  }else{
+    this.next();
   }
 });
 
@@ -21,15 +22,12 @@ Router.map(function() {
   });
   this.route("dashboard", {
     path: "/dashboard",
-    waitOn: {  //populates wait list with these subscriptions
+    waitOn: function() {  //populates wait list with these subscriptions
       return [
         Meteor.subscribe('t_softwares'),
         Meteor.subscribe('t_operating_systems'),
         Meteor.subscribe('t_hosts')
-      ]
-    },
-    action: function() {  //runs once this.ready() == true
-      this.render('dashboard');
+      ];
     }
   });
   this.route("profile", {

@@ -12,6 +12,14 @@ Meteor.publish('chat', function() {
 Meteor.publish('t_hosts', function() {
 	return THosts.find();
 });
+Meteor.publish('t_operating_systems', function(){
+	return TOperatingSystems.find();
+});
+Meteor.publish('t_softwares', function() {
+	return TSoftwares.find();
+});
+
+
 Meteor.publish('user_data_logs', function() {
 	return UserDataLogs.find();
 });
