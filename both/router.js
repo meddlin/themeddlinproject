@@ -55,6 +55,24 @@ Router.map(function() {
     }else if(this.params._field === "user"){
       Meteor.subscribe('t_users');
       this.render('newUser');
+    }else if(this.params._field === "company"){
+      Meteor.subscribe('t_companies');
+      this.render('newCompany');
+    }else if(this.params._field === "domain"){
+      Meteor.subscribe('t_domains');
+      this.render('newDomain');
+    }else if(this.params._field === "leak"){
+      Meteor.subscribe('t_leaks');
+      this.render('newLeak');
+    }else if(this.params._field === "location"){
+      Meteor.subscribe('t_locations');
+      this.render('newLocation');
+    }else if(this.params._field === "netblock"){
+      Meteor.subscribe('t_netblocks');
+      this.render('newNetblock');
+    }else if(this.params._field === "vuln"){
+      Meteor.subscribe('t_vulns');
+      this.render('newVuln');
     }else{
       this.render(notFoundTemplate);
     }

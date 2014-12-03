@@ -83,6 +83,69 @@ AdminConfig =
         {label: 'Updated At', name: 'updatedAt'}
       ]
     },
+    TCompanies: {
+      icon: 'cubes',
+      tableColumns: [
+        {label: 'Company', name: 'company'},
+        {label: 'Description', name: 'description'},
+        {label: 'Module', name: 'module'}
+      ]
+    },
+    TDomains: {
+      icon: 'home',
+      tableColumns: [
+        {label: 'Domain', name: 'domain'},
+        {label: 'Module', name: 'module'}
+      ]
+    },
+    TLeaks: {
+      icon: 'eyedropper',
+      tableColumns: [
+        {label: 'Leak ID', name: 'leakId'},
+        {label: 'Description', name: 'description'},
+        {label: 'Source Refs', name: 'sourceRefs'},
+        {label: 'Leak Type', name: 'leakType'},
+        {label: 'Title', name: 'title'},
+        {label: 'Import Date', name: 'importDate'},
+        {label: 'Leak Date', name: 'leakDate'},
+        {label: 'Attackers', name: 'attackers'},
+        {label: 'Num. Of Entries', name: 'numEntries'},
+        {label: 'Attack Method', name: 'attackMethod'},
+        {label: 'Target Industries', name: 'targetIndustries'},
+        {label: 'Pass. Hash', name: 'passwordHash'},
+        {label: 'Targets', name: 'targets'},
+        {label: 'Media Refs', name: 'mediaRefs'},
+        {label: 'Module', name: 'module'}
+      ]
+    },
+    TLocations: {
+      icon: 'plus-circle',
+      tableColumns: [
+        {label: 'Latitude', name: 'latitude'},
+        {label: 'Longitude', name: 'longitude'},
+        {label: 'Str. Addr.', name: 'streetAddress'},
+        {label: 'Module', name: 'module'}
+      ]
+    },
+    TNetblocks: {
+      icon: 'sliders',
+      tableColumns: [
+        {label: 'Netblock', name: 'netblock'},
+        {label: 'Module', name: 'module'}
+      ]
+    },
+    TVulns: {
+      icon: 'fire',
+      tableColumns: [
+        {label: 'Host', name: 'host'},
+        {label: 'Reference', name: 'reference'},
+        {label: 'Example', name: 'example'},
+        {label: 'Publish Date', name: 'publishDate'},
+        {label: 'Category', name: 'category'},
+        {label: 'Status', name: 'status'},
+        {label: 'Module', name: 'module'}
+      ]
+    },
     TUsers: {
       icon: 'users',
       tableColumns: [

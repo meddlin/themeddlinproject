@@ -1,0 +1,4 @@
+TNetblockModel = {
+	netblock: "",
+	module: ""
+}

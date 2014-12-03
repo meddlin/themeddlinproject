@@ -1,0 +1,4 @@
+TDomainModel = {
+	domain: "",
+	module: ""
+}

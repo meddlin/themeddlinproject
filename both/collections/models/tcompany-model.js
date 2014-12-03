@@ -1,0 +1,5 @@
+TCompanyModel = {
+	company: "",
+	description: "",
+	module: ""
+}
