@@ -20,17 +20,14 @@
 					{{#if isInRole 'admin'}}
 						<li><a href="{{pathFor 'adminDashboard'}}">Admin</a></li>
 					{{/if}}
-					<li class="dropdown hidden-xs">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{niceName}} <i class="fa fa-chevron-down i-xs"></i></a>
-						<ul class="dropdown-menu">
-							<li><a href="{{pathFor 'profile'}}">Profile</a></li>
-							<li><a href="{{pathFor 'account'}}">Account</a></li>
-							<li class="divider"></li>
-							<li><a href="/sign-out">Logout</a></li>
-						</ul>
+					<li class="hidden-xs">
+						{{> userDropdown}}
 					</li>
 					<li class="visible-xs">
 						<a href="{{pathFor 'profile'}}" class="close-navbar">Edit profile</a>
+					</li>
+					<li class="visible-xs">
+						<a href="{{pathFor 'account'}}" class="close-navbar">Account</a>
 					</li>
 					<li class="visible-xs">
 						<a class="close-navbar" href="/sign-out">Sign out</a>
@@ -39,5 +36,23 @@
 				{{/if}}
 			</div>
 		</div>
+	</div>
+</template>
+
+<template name="userDropdown">
+	<div id="testdrop" class="ui dropdown">
+  	  <div class="ui huge labeled icon button">
+	    <i class="user icon"></i>
+	    {{niceName}}
+	  </div>
+
+	  <i class="arrow down icon"></i>
+	  <!-- <i class="chevron down icon"></i> --> <!-- the 'chevron' and 'arrow' icon codes are switched FOR SOME RANDOM AND OBSCURE REASON!!! -->
+	  <div class="menu">
+	    <div class="item"><a href="{{pathFor 'profile'}}">Profile</a></div>
+	    <div class="item"><a href="{{pathFor 'account'}}">Account</a></div>
+	    <div class="divider"></div>
+	    <div class="item"><a href="/sign-out">Logout</a></div>
+	  </div>
 	</div>
 </template>
