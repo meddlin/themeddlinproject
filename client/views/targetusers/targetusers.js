@@ -20,6 +20,10 @@ Template.targetusers.helpers({
    */
 });
 
+Template.usersTableBody.entries = function(){
+  return TUsers.find();
+};
+
 /*****************************************************************************/
 /* targetusers: Lifecycle Hooks */
 /*****************************************************************************/

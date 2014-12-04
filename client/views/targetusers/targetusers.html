@@ -15,8 +15,8 @@
 		<tr><th>Username</th>
 		    <th>First | Last</th>
 		    <th>Email</th>
-		    <th>Password</th>
-		    <th>PGP Key?</th>
+		    <th>Region</th>
+		    <th>Country</th>
 	  	</tr>
   </thead>
 </template>
@@ -33,7 +33,7 @@
 
 <template name="usersTableBody">
 	<tbody>
-		<tr>
+		<!-- <tr>
 	      <td>kookyuser</td>
 	      <td>Jack Sparrow</td>
 	      <td>onewickedwench@EITC.com</td>
@@ -46,7 +46,16 @@
 	      <td>the.legend@email.com</td>
 	      <td>adsf0923m  sd</td>
 	      <th>YES</th>
-	    </tr>
+	    </tr> -->
+	    {{#each entries}}
+		<tr>
+			<td>{{this.username}}</td>
+			<td>{{this.fname}} {{this.lname}}</td>
+			<td>{{this.email}}</td>
+			<td>{{this.region}}</td>
+			<td>{{this.country}}</td>
+		</tr>
+		{{/each}}
 	</tbody>
 </template>
 

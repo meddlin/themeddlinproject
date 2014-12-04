@@ -19,7 +19,9 @@ Meteor.publish('t_softwares', function() {
 	return TSoftwares.find();
 });
 
-
+Meteor.publish('t_users', function() {
+	return TUsers.find();
+});
 Meteor.publish('t_locations', function() {
 	return TLocations.find();
 });
@@ -28,6 +30,9 @@ Meteor.publish('t_leaks', function() {
 });
 Meteor.publish('t_domains', function() {
 	return TDomains.find();
+});
+Meteor.publish('t_companies', function() {
+	return TCompanies.find();
 });
 
 Meteor.publish('user_data_logs', function() {
