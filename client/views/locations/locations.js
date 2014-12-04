@@ -39,10 +39,10 @@ Template.locations.rendered = function () {
       console.log('google maps init');
       var mapOptions = {
         zoom: 13,
-        mapTypeId: google.maps.MapTypeId.SATELLITE
+        mapTypeId: google.maps.MapTypeId.HYBRID
       };
       map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-      map.setCenter(new google.maps.LatLng(35.363556, 138.730438));
+      map.setCenter(new google.maps.LatLng(30.363556, -90.730438));
     }
   );
 
