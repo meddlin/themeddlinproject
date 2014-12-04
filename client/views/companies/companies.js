@@ -20,6 +20,10 @@ Template.Companies.helpers({
    */
 });
 
+Template.companiesData.entries = function(){
+  return TCompanies.find();
+};
+
 /*****************************************************************************/
 /* Companies: Lifecycle Hooks */
 /*****************************************************************************/

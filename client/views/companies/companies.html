@@ -1,5 +1,52 @@
 
 <template name="Companies">
   client/views/companies/companies.html
+  {{> companiesTable}}
 </template>
 
+<template name="companiesTable">
+	<table class="ui inverted table segment">
+		{{> companiesTableHeader}}
+		{{> companiesTableBody}}
+  	</table>
+</template>
+
+<template name="companiesTableHeader">
+	<thead>
+			<th>Company</th>
+		    <th>Description</th>
+		    <th>Module</th>
+  </thead>
+</template>
+
+<template name="companiesTableFooter">
+	<tfoot>
+	    <tr>
+	    	<th></th>
+		    <th></th>
+		    <th></th>
+		    <th></th>
+	  </tr>
+  </tfoot>
+</template>
+
+<template name="companiesData">
+	{{#each entries}}
+		<tr>
+			<td>{{this.company}}</td>
+			<td>{{this.description}}</td>
+			<td>{{this.module}}</td>
+		</tr>
+	{{/each}}
+</template>
+
+<template name="companiesTableBody">
+	<tbody>
+		<!-- body goes here when we get data -->
+		{{> companiesData}}
+	</tbody>
+</template>
+
+<template name="companiesTableRow">
+<!-- //TODO: the {{}} stuff goes here once we have something being pulled from the collection via JS -->
+</template>
