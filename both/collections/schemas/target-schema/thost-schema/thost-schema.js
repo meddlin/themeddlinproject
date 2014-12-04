@@ -10,6 +10,11 @@ THostSchema = new SimpleSchema({
 		label: "IPv6 Address",
 		optional: true
 	},
+	hostname: {
+		type: String,
+		label: "Hostname",
+		optional: true
+	},
 	macAddr: {
 		type: String,
 		label: "MAC Address",

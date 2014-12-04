@@ -26,5 +26,12 @@ parsePortsReconng = function(data){
 		tempPort.port = data[i][2];
 		tempPort.proto = data[i][3];
 		tempPort.module = data[i][4];
+
+		/*if(ip || host !undefined)
+			storedHost = find();
+			update(storedHost);
+		else
+			insert();*/
+
 	}
 }
