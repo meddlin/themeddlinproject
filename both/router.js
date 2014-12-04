@@ -145,7 +145,10 @@ Router.map(function() {
     path: "/pushpins"
   });
   this.route("targetusers", {
-    path: "/targetusers"
+    path: "/targetusers",
+    waiton: function(){
+      Meteor.subscribe('t_users');
+    }
   });
   this.route("upload", {
     path: "/upload",
