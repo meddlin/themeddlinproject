@@ -3,9 +3,53 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">   </script>
   <div class="row">
   	{{> mapCanvas}}
+  	<br />
+  	{{> locationsTable}}
   </div>
 </template>
 
 <template name="mapCanvas">
     <div id="map-canvas" style="width:900px; height:420px;"></div>
+</template>
+
+<template name="locationsTable">
+	<table class="ui inverted table segment">
+		{{> locationsTableHeader}}
+		{{> locationsTableBody}}
+  	</table>
+</template>
+
+<template name="locationsTableHeader">
+	<thead>
+		<tr>
+			<th>Leak ID</th>
+		    <th>Description</th>
+		    <th>Leak Type</th>
+		    <th>Title</th>
+		    <th>Import Date</th>
+		    <th>Leak Date</th>
+		    <th>Attackers</th>
+	  	</tr>
+  </thead>
+</template>
+
+<template name="locationsTableFooter">
+	<tfoot>
+	    <tr>
+	    	<th></th>
+		    <th></th>
+		    <th></th>
+		    <th></th>
+	  </tr>
+  </tfoot>
+</template>
+
+<template name="locationsTableBody">
+	<tbody>
+		<!-- body goes here when we get data -->
+	</tbody>
+</template>
+
+<template name="locationsTableRow">
+<!-- //TODO: the {{}} stuff goes here once we have something being pulled from the collection via JS -->
 </template>
