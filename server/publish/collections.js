@@ -20,6 +20,10 @@ Meteor.publish('t_softwares', function() {
 });
 
 
+Meteor.publish('t_locations', function() {
+	return TLocations.find();
+});
+
 Meteor.publish('user_data_logs', function() {
 	return UserDataLogs.find();
 });

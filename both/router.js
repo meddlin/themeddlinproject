@@ -60,6 +60,7 @@ Router.map(function() {
   this.route('locations', {
     path: '/locations',
     waitOn: function(){
+      console.log("locations waiton");
       return Meteor.subscribe('t_locations');
     }
   });

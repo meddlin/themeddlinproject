@@ -1,5 +1,11 @@
 
-<template name="Locations">
-  client/views/locations/locations.html
+<template name="locations">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">   </script>
+  <div class="row">
+  	{{> mapCanvas}}
+  </div>
 </template>
 
+<template name="mapCanvas">
+    <div id="map-canvas" style="width:900px; height:420px;"></div>
+</template>
