@@ -26,17 +26,17 @@ grabHostAddressElements = function(el, index){
 			if(el.$.addr != undefined){
 				console.log(">> el.$.addr"); console.log(el.$.addr);
 				// add here
-				THosts.addr = el.$.addr;
+				THostModel.addr = el.$.addr;
 			}
 			if(el.$.addrtype != undefined){
 				console.log(">> el.$.addrtype"); console.log(el.$.addrtype);
 				// add here
-				THosts.addrtype = el.$.addrtype;
+				THostModel.addrtype = el.$.addrtype;
 			}
 			if(el.$.vendor != undefined){
 				console.log(">> el.$.vendor"); console.log(el.$.vendor);
 				// add here
-				THosts.vendor = el.$.vendor;
+				THostModel.vendor = el.$.vendor;
 			}
 		}
 	}
@@ -60,7 +60,7 @@ grabHostHostnamesHostnameElements = function(el, index){
 			console.log(">> el.$: "); console.log(el.$);
 			if(el.$.name != undefined){
 				console.log(">> el.$.name: "); console.log(el.$.name);
-				THosts.hostname = el.$.name;
+				THostModel.hostname = el.$.name;
 			}
 			if(el.$.type != undefined){
 				console.log(">> el.$.type: "); console.log(el.$.type);

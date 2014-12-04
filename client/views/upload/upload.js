@@ -130,8 +130,6 @@ var xmlHandoff = function(file){
 
 
 
-
-
 ///**** OLD CODE ****///
 
 /*FS.Utility.eachFile(event, function(file) {

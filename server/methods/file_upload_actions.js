@@ -20,22 +20,22 @@ Meteor.methods({
 
 			//The Insert
 			THosts.insert({
-				ip: THost.addr,
-				hostname: THost.hostname,
+				ip: THostModel.addr,
+				hostname: THostModel.hostname,
 				ports: [
-					THost.portNumber,
-					THost.portService,
-					THost.portPortStatus,
-					THost.portOs,
-					THost.portVersion,
-					THost.portProtocol,
+					THostModel.portNumber,
+					THostModel.portService,
+					THostModel.portPortStatus,
+					THostModel.portOs,
+					THostModel.portVersion,
+					THostModel.portProtocol,
 					],
-				region: THost.region,
-				country: THost.country,
-				latitude: THost.latitude,
-				longitude: THost.longitude
+				region: THostModel.region,
+				country: THostModel.country,
+				latitude: THostModel.latitude,
+				longitude: THostModel.longitude
 			});
-			console.log(THost);
+			console.log(THostModel);
 			return result;
 		});
 		return parseResult;
