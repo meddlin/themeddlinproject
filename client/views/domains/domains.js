@@ -1,8 +1,8 @@
 
 /*****************************************************************************/
-/* Domains: Event Handlers and Helpersss .js*/
+/* domains: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-Template.Domains.events({
+Template.domains.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
@@ -11,7 +11,7 @@ Template.Domains.events({
    */
 });
 
-Template.Domains.helpers({
+Template.domains.helpers({
   /*
    * Example:
    *  items: function () {
@@ -20,16 +20,20 @@ Template.Domains.helpers({
    */
 });
 
+Template.viewDomain.domain = function() {
+  return TDomains.find();
+}
+
 /*****************************************************************************/
-/* Domains: Lifecycle Hooks */
+/* domains: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Domains.created = function () {
+Template.domains.created = function () {
 };
 
-Template.Domains.rendered = function () {
+Template.domains.rendered = function () {
 };
 
-Template.Domains.destroyed = function () {
+Template.domains.destroyed = function () {
 };
 
 

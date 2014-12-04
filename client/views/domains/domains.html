@@ -1,5 +1,71 @@
 
-<template name="Domains">
-  client/views/domains/domains.html
+<template name="domains">
+	<div class="ui grid">
+		<div class="four wide column">
+			{{> viewDomain}}
+		</div>
+		<div class="four wide column"></div>
+		<div class="four wide column"></div>
+		<div class="four wide column"></div>
+	</div>
+
+  <br /><br />
+  <!-- {{> domainsTable}} -->
 </template>
 
+<template name="viewDomain">
+	{{#each domain}}
+	<div class="ui inverted segment">
+	  	<div class="ui inverted green statistic">
+	  		<div class="value">
+	  			{{this.domain}}
+	  		</div>
+	  		<div class="label">
+	  			Domain
+	  		</div>
+		</div>
+	</div>
+	{{/each}}
+</template>
+
+<template name="domainsTable">
+	<table class="ui inverted table segment">
+		{{> domainsTableHeader}}
+		{{> domainsTableBody}}
+  	</table>
+</template>
+
+<template name="domainsTableHeader">
+	<thead>
+		<tr>
+			<th>Leak ID</th>
+		    <th>Description</th>
+		    <th>Leak Type</th>
+		    <th>Title</th>
+		    <th>Import Date</th>
+		    <th>Leak Date</th>
+		    <th>Attackers</th>
+	  	</tr>
+  </thead>
+</template>
+
+<template name="domainsTableFooter">
+	<tfoot>
+	    <tr>
+	    	<th></th>
+		    <th></th>
+		    <th></th>
+		    <th></th>
+	  </tr>
+  </tfoot>
+</template>
+
+<template name="domainsTableBody">
+	<tbody>
+		<!-- body goes here when we get data -->
+	</tbody>
+</template>
+
+<template name="domainsTableRow">
+<!-- //TODO: the {{}} stuff goes here once we have something being pulled from the collection via JS -->
+</template>
