@@ -14,25 +14,17 @@
 	<thead>
 		<tr><th>Hostname</th>
 		    <th>IPv4</th>
+		    <th>IPv6</th>
 		    <th>MAC</th>
-		    <th>Open Ports?</th>
+		    <th>NIC Vendor</th>
 	  	</tr>
   </thead>
 </template>
 
-<template name="hostsTableFooter">
-	<tfoot>
-	    <tr>
-	    	<th>3 People</th>
-		    <th>2 Approved</th>
-		    <th></th>
-	  </tr>
-  </tfoot>
-</template>
-
 <template name="hostsTableBody">
 	<tbody>
-		<tr>
+		{{> hostsData}}
+		<!-- <tr>
 	      <td>ns1.selu.edu</td>
 	      <td>147.174.1.3</td>
 	      <td>3j:9f:3f:00</td>
@@ -49,10 +41,23 @@
 	      <td>147.174.1.5</td>
 	      <td>3j:9f:3f:00</td>
 	      <td>YES</td>
-	    </tr>
+	    </tr> -->
 	</tbody>
 </template>
 
 <template name="hostsTableRow">
 <!-- //TODO: the {{}} stuff goes here once we have something being pulled from the collection via JS -->
+
+</template>
+
+<template name="hostsData">
+	{{#each entries}}
+		<tr>
+			<td>{{this.hostname}}</td>
+			<td>{{this.ipv4Addr}}</td>
+			<td>{{this.ipv6Addr}}</td>
+			<td>{{this.macAddr}}</td>
+			<td>{{this.nicVendor}}</td>
+		</tr>
+	{{/each}}
 </template>

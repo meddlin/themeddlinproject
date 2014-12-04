@@ -25,7 +25,7 @@ var seedData = function(){
 	NetworkTools.remove({}); //clears the collection
 	OperatingSystems.remove({});
 	Softwares.remove({});
-	/*THostsCollection.remove({});*/
+	/*THosts.remove({});*/
 	TOperatingSystems.remove({});
 	TSoftwares.remove({});
 	TUsers.remove({});
