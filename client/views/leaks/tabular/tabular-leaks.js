@@ -1,4 +1,4 @@
-TabularTables.Leaks = new Tabular.Table({
+TabularTablesLeaks = new Tabular.Table({
 	name: "LeakTable",
 	collection: TLeaks,
 	columns: [
