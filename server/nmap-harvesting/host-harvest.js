@@ -26,17 +26,17 @@ grabHostAddressElements = function(el, index){
 			if(el.$.addr != undefined){
 				console.log(">> el.$.addr"); console.log(el.$.addr);
 				// add here
-				THostModel.addr = el.$.addr;
+				THostModel.ipv4Addr = el.$.addr;
 			}
 			if(el.$.addrtype != undefined){
 				console.log(">> el.$.addrtype"); console.log(el.$.addrtype);
 				// add here
-				THostModel.addrtype = el.$.addrtype;
+				//THostModel.addrtype = el.$.addrtype;
 			}
 			if(el.$.vendor != undefined){
 				console.log(">> el.$.vendor"); console.log(el.$.vendor);
 				// add here
-				THostModel.vendor = el.$.vendor;
+				THostModel.nicVendor = el.$.vendor;
 			}
 		}
 	}

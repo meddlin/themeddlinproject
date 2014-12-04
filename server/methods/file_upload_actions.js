@@ -19,7 +19,8 @@ Meteor.methods({
 			mainNmapHarvest(nmaprun);
 
 			//The Insert
-			THosts.insert({
+			THosts.insert(THostModel);
+			/*THosts.insert({
 				ip: THostModel.addr,
 				hostname: THostModel.hostname,
 				ports: [
@@ -34,7 +35,7 @@ Meteor.methods({
 				country: THostModel.country,
 				latitude: THostModel.latitude,
 				longitude: THostModel.longitude
-			});
+			});*/
 			console.log(THostModel);
 			return result;
 		});
