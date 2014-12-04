@@ -9,10 +9,13 @@
 			New Host (Target)
 		</div>
 	</h1>
+	<div class="ui form">
+	{{> quickForm collection="THosts" doc=this id="insertTHostsForm" type="insert"}}
+	</div>
 
-	{{#autoForm id="insertNewTHost" type="insert" collection="THosts"}}
+	<!-- {{#autoForm id="insertNewTHost" type="insert" collection="THosts"}} -->
 	<!-- all the little form stuffs -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<label class="control-label title-color">{{afFieldLabelText name='ipv4Addr'}}</label>
 		{{> afFieldInput name="ipv4Addr"}}
 		<br />
@@ -24,7 +27,7 @@
 		<br />
 		<label class="control-label title-color">{{afFieldLabelText name='nicVendor'}}</label>
 		{{> afFieldInput name="nicVendor"}}
-		<br />
+		<br /> -->
 
 		<!-- PORTS GO HERE!!! -->
 
@@ -32,7 +35,7 @@
 		<!-- <label class="control-label title-color">{{afFieldLabelText name='osFingerprint'}}</label>
 		{{> afFieldInput name="osFingerprint"}}<br /> -->
 
-		<label class="control-label title-color">{{afFieldLabelText name='region'}}</label>
+		<!-- <label class="control-label title-color">{{afFieldLabelText name='region'}}</label>
 		{{> afFieldInput name="region"}}
 		<br />
 		<label class="control-label title-color">{{afFieldLabelText name='country'}}</label>
@@ -44,16 +47,16 @@
 		<label class="control-label title-color">{{afFieldLabelText name='longitude'}}</label>
 		{{> afFieldInput name="longitude"}}
 		<br />
-	</div>
+	</div> -->
 	<!-- submit/cancel buttons -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<div class="ui huge buttons">
 			<div class="ui positive button" id="newHostSubmit">Submit</div>
 			<div class="or"></div>
 			<div class="ui button" id="newHostCancel">Cancel</div>
 		</div>
   	</div>
-  	{{/autoForm}}
+  	{{/autoForm}} -->
 </template>
 
 <template name="newOs">
@@ -63,8 +66,11 @@
 			New Operating System (Target)
 		</div>
 	</h1>
+	<div class="ui form">
+	{{> quickForm collection="TOperatingSystems" doc=this id="insertTOperatingSystemsForm" type="insert"}}
+	</div>
 
-	{{#autoForm id="insertNewTOperatingSystem" type="insert" collection="TOperatingSystems"}}
+	<!-- {{#autoForm id="insertNewTOperatingSystem" type="insert" collection="TOperatingSystems"}}
 	<div class="form-group">
 		<label class="control-label title-color">{{afFieldLabelText name='name'}}</label>
 		{{> afFieldInput name='name'}}
@@ -75,17 +81,17 @@
 		<label class="control-label title-color">{{afFieldLabelText name='version'}}</label>
 		{{> afFieldInput name='version'}}
 		<br />
-	</div>
+	</div> -->
 
 	<!-- submit/cancel buttons -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<div class="ui huge buttons">
 			<div class="ui positive button" id="newOperatingSystemSubmit">Submit</div>
 			<div class="or"></div>
 			<div class="ui button" id="newOperatingSystemCancel">Cancel</div>
 		</div>
   	</div>
-	{{/autoForm}}
+	{{/autoForm}} -->
 </template>
 
 <template name="newSoftware">
@@ -95,8 +101,11 @@
 			New Software (Target)
 		</div>
 	</h1>
+	<div class="ui form">
+	{{> quickForm collection="TSoftwares" doc=this id="insertTSoftwaresForm" type="insert"}}
+	</div>
 
-	{{#autoForm id="insertNewTSoftware" type="insert" collection="TSoftwares"}}
+	<!-- {{#autoForm id="insertNewTSoftware" type="insert" collection="TSoftwares"}}
 	<div class="form-group">
 		<label class="control-label title-color">{{afFieldLabelText name='name'}}</label>
 		{{> afFieldInput name='name'}}
@@ -107,17 +116,17 @@
 		<label class="control-label title-color">{{afFieldLabelText name='version'}}</label>
 		{{> afFieldInput name='version'}}
 		<br />
-	</div>
+	</div> -->
 
 	<!-- submit/cancel buttons -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<div class="ui huge buttons">
 			<div class="ui positive button" id="newSoftwareSubmit">Submit</div>
 			<div class="or"></div>
 			<div class="ui button" id="newSoftwareCancel">Cancel</div>
 		</div>
   	</div>
-	{{/autoForm}}
+	{{/autoForm}} -->
 </template>
 
 <template name="newUser">
@@ -127,8 +136,11 @@
 			New User (Target)
 		</div>
 	</h1>
+	<div class="ui form">
+	{{> quickForm collection="TUsers" doc=this id="insertTUsersForm" type="insert"}}
+	</div>
 
-	{{#autoForm id="insertNewTUser" type="insert" collection="TUsers"}}
+	<!-- {{#autoForm id="insertNewTUser" type="insert" collection="TUsers"}}
 	<div class="form-group">
 		<label class="control-label title-color">{{afFieldLabelText name='fname'}}</label>
 		{{> afFieldInput name='fname'}}
@@ -172,17 +184,17 @@
 		<label class="control-label title-color">{{afFieldLabelText name='vuln'}}</label>
 		{{> afFieldInput name='vuln'}}
 		<br />
-	</div>
+	</div> -->
 
 	<!-- submit/cancel buttons -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<div class="ui huge buttons">
 			<div class="ui positive button" id="newOperatingSystemSubmit">Submit</div>
 			<div class="or"></div>
 			<div class="ui button" id="newOperatingSystemCancel">Cancel</div>
 		</div>
   	</div>
-	{{/autoForm}}
+	{{/autoForm}} -->
 </template>
 
 <template name="newCompany">
@@ -192,8 +204,11 @@
 			New Company (Target)
 		</div>
 	</h1>
+	<div class="ui form">
+	{{> quickForm collection="TCompanies" doc=this id="insertTCompaniesForm" type="insert"}}
+	</div>
 
-	{{#autoForm id="insertNewTCompany" type="insert" collection="TCompanies"}}
+	<!-- {{#autoForm id="insertNewTCompany" type="insert" collection="TCompanies"}}
 	<div class="form-group">
 		<label class="control-label title-color">{{afFieldLabelText name='company'}}</label>
 		{{> afFieldInput name='company'}}
@@ -201,17 +216,17 @@
 		<label class="control-label title-color">{{afFieldLabelText name='description'}}</label>
 		{{> afFieldInput name='description'}}
 		<br />
-	</div>
+	</div> -->
 
 	<!-- submit/cancel buttons -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<div class="ui huge buttons">
 			<div class="ui positive button" id="newCompanySubmit">Submit</div>
 			<div class="or"></div>
 			<div class="ui button" id="newCompanyCancel">Cancel</div>
 		</div>
   	</div>
-	{{/autoForm}}
+	{{/autoForm}} -->
 </template>
 
 <template name="newDomain">
@@ -221,23 +236,26 @@
 			New Domain (Target)
 		</div>
 	</h1>
+	<div class="ui form">
+	{{> quickForm collection="TDomains" doc=this id="insertTDomainsForm" type="insert"}}
+	</div>
 
-	{{#autoForm id="insertNewTDomain" type="insert" collection="TDomains"}}
+	<!-- {{#autoForm id="insertNewTDomain" type="insert" collection="TDomains"}}
 	<div class="form-group">
 		<label class="control-label title-color">{{afFieldLabelText name='domain'}}</label>
 		{{> afFieldInput name='domain'}}
 		<br />
-	</div>
+	</div> -->
 
 	<!-- submit/cancel buttons -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<div class="ui huge buttons">
 			<div class="ui positive button" id="newDomainSubmit">Submit</div>
 			<div class="or"></div>
 			<div class="ui button" id="newDomainCancel">Cancel</div>
 		</div>
   	</div>
-	{{/autoForm}}
+	{{/autoForm}} -->
 </template>
 
 <template name="newLeak">
@@ -247,8 +265,11 @@
 			New Leak (Target)
 		</div>
 	</h1>
+	<div class="ui form">
+	{{> quickForm collection="TLeaks" doc=this id="insertTLeaksForm" type="insert"}}
+	</div>
 
-	{{#autoForm id="insertNewTLeak" type="insert" collection="TLeaks"}}
+	<!-- {{#autoForm id="insertNewTLeak" type="insert" collection="TLeaks"}}
 	<div class="form-group">
 		<label class="control-label title-color">{{afFieldLabelText name='leakId'}}</label>
 		{{> afFieldInput name='leakId'}}
@@ -298,17 +319,17 @@
 		<label class="control-label title-color">{{afFieldLabelText name='mediaRefs'}}</label>
 		{{> afFieldInput name='mediaRefs'}}
 		<br />
-	</div>
+	</div> -->
 
 	<!-- submit/cancel buttons -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<div class="ui huge buttons">
 			<div class="ui positive button" id="newLeakSubmit">Submit</div>
 			<div class="or"></div>
 			<div class="ui button" id="newLeakCancel">Cancel</div>
 		</div>
   	</div>
-	{{/autoForm}}
+	{{/autoForm}} -->
 </template>
 
 <template name="newLocation">
@@ -318,8 +339,11 @@
 			New Location (Target)
 		</div>
 	</h1>
+	<div class="ui form">
+	{{> quickForm collection="TLocations" doc=this id="insertTLocationsForm" type="insert"}}
+	</div>
 
-	{{#autoForm id="insertNewTLocation" type="insert" collection="TLocations"}}
+	<!-- {{#autoForm id="insertNewTLocation" type="insert" collection="TLocations"}}
 	<div class="form-group">
 		<label class="control-label title-color">{{afFieldLabelText name='latitude'}}</label>
 		{{> afFieldInput name='latitude'}}
@@ -330,17 +354,17 @@
 		<label class="control-label title-color">{{afFieldLabelText name='streetAddress'}}</label>
 		{{> afFieldInput name='streetAddress'}}
 		<br />
-	</div>
+	</div> -->
 
 	<!-- submit/cancel buttons -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<div class="ui huge buttons">
 			<div class="ui positive button" id="newLocationSubmit">Submit</div>
 			<div class="or"></div>
 			<div class="ui button" id="newLocationCancel">Cancel</div>
 		</div>
   	</div>
-	{{/autoForm}}
+	{{/autoForm}} -->
 </template>
 
 <template name="newNetblock">
@@ -350,23 +374,26 @@
 			New Netblock (Target)
 		</div>
 	</h1>
+	<div class="ui form">
+	{{> quickForm collection="TNetblocks" doc=this id="insertTNetblocksForm" type="insert"}}
+	</div>
 
-	{{#autoForm id="insertNewTNetblock" type="insert" collection="TNetblocks"}}
+	<!-- {{#autoForm id="insertNewTNetblock" type="insert" collection="TNetblocks"}}
 	<div class="form-group">
 		<label class="control-label title-color">{{afFieldLabelText name='netblock'}}</label>
 		{{> afFieldInput name='netblock'}}
 		<br />
-	</div>
+	</div> -->
 
 	<!-- submit/cancel buttons -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<div class="ui huge buttons">
 			<div class="ui positive button" id="newNetblocksSubmit">Submit</div>
 			<div class="or"></div>
 			<div class="ui button" id="newNetblocksCancel">Cancel</div>
 		</div>
   	</div>
-	{{/autoForm}}
+	{{/autoForm}} -->
 </template>
 
 <template name="newPushpin">
@@ -376,8 +403,11 @@
 			New Pushpin (Target)
 		</div>
 	</h1>
+	<div class="ui form">
+	{{> quickForm collection="TPushpins" doc=this id="insertTPushpinsForm" type="insert"}}
+	</div>
 
-	{{#autoForm id="insertNewTPushpin" type="insert" collection="TPushpins"}}
+	<!-- {{#autoForm id="insertNewTPushpin" type="insert" collection="TPushpins"}}
 	<div class="form-group">
 		<label class="control-label title-color">{{afFieldLabelText name='source'}}</label>
 		{{> afFieldInput name='source'}}
@@ -409,17 +439,17 @@
 		<label class="control-label title-color">{{afFieldLabelText name='time'}}</label>
 		{{> afFieldInput name='time'}}
 		<br />
-	</div>
+	</div> -->
 
 	<!-- submit/cancel buttons -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<div class="ui huge buttons">
 			<div class="ui positive button" id="newPushpinSubmit">Submit</div>
 			<div class="or"></div>
 			<div class="ui button" id="newPushpinCancel">Cancel</div>
 		</div>
   	</div>
-	{{/autoForm}}
+	{{/autoForm}} -->
 </template>
 
 <template name="newVuln">
@@ -429,8 +459,11 @@
 			New Vulnerability (Target)
 		</div>
 	</h1>
+	<div class="ui form">
+	{{> quickForm collection="TVulns" doc=this id="insertTVulnsForm" type="insert"}}
+	</div>
 
-	{{#autoForm id="insertNewTVuln" type="insert" collection="TVulns"}}
+	<!-- {{#autoForm id="insertNewTVuln" type="insert" collection="TVulns"}}
 	<div class="form-group">
 		<label class="control-label title-color">{{afFieldLabelText name='host'}}</label>
 		{{> afFieldInput name='host'}}
@@ -450,15 +483,15 @@
 		<label class="control-label title-color">{{afFieldLabelText name='status'}}</label>
 		{{> afFieldInput name='status'}}
 		<br />
-	</div>
+	</div> -->
 
 	<!-- submit/cancel buttons -->
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<div class="ui huge buttons">
 			<div class="ui positive button" id="newVulnSubmit">Submit</div>
 			<div class="or"></div>
 			<div class="ui button" id="newVulnCancel">Cancel</div>
 		</div>
   	</div>
-	{{/autoForm}}
+	{{/autoForm}} -->
 </template>

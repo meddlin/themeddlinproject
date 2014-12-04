@@ -26,6 +26,9 @@ Meteor.publish('t_locations', function() {
 Meteor.publish('t_leaks', function() {
 	return TLeaks.find();
 });
+Meteor.publish('t_domains', function() {
+	return TDomains.find();
+});
 
 Meteor.publish('user_data_logs', function() {
 	return UserDataLogs.find();
