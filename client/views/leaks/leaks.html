@@ -9,5 +9,49 @@
 	    <p>Parsing 'leak' data from recon-ng is supported, however the developers of TMP are but students ("mere muggles"). Therefore, we could not afford the increased development costs of purchasing API keys from PwnedList in order to test the necessary modules within recon-ng. So, we simply provide a table.</p>
 	  </div>
 	</div>
+	<br /><br />
+	<!-- {{> tabular table=TabularTables.Leaks class="table table-striped table-bordered table-condensed"}} -->
+	{{> leaksTable}}
 </template>
 
+<template name="leaksTable">
+	<table class="ui inverted table segment">
+		{{> leaksTableHeader}}
+		{{> leaksTableBody}}
+  	</table>
+</template>
+
+<template name="leaksTableHeader">
+	<thead>
+		<tr>
+			<th>Leak ID</th>
+		    <th>Description</th>
+		    <th>Leak Type</th>
+		    <th>Title</th>
+		    <th>Import Date</th>
+		    <th>Leak Date</th>
+		    <th>Attackers</th>
+	  	</tr>
+  </thead>
+</template>
+
+<template name="leaksTableFooter">
+	<tfoot>
+	    <tr>
+	    	<th></th>
+		    <th></th>
+		    <th></th>
+		    <th></th>
+	  </tr>
+  </tfoot>
+</template>
+
+<template name="leaksTableBody">
+	<tbody>
+		<!-- body goes here when we get data -->
+	</tbody>
+</template>
+
+<template name="leaksTableRow">
+<!-- //TODO: the {{}} stuff goes here once we have something being pulled from the collection via JS -->
+</template>
