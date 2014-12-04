@@ -40,7 +40,46 @@ Router.map(function() {
     path: "/account"
   });
   this.route('hosts', {
-    path: '/hosts'
+    path: '/hosts',
+    waitOn: function(){
+      return Meteor.subscribe('t_hosts');
+    }
+  });
+  this.route('vulns', {
+    path: '/vulns',
+    waitOn: function(){
+      return Meteor.subscribe('t_vulns');
+    }
+  });
+  this.route('netblocks', {
+    path: '/netblocks',
+    waitOn: function(){
+      return Meteor.subscribe('t_netblocks');
+    }
+  });
+  this.route('locations', {
+    path: '/locations',
+    waitOn: function(){
+      return Meteor.subscribe('t_locations');
+    }
+  });
+  this.route('leaks', {
+    path: '/leaks',
+    waitOn: function(){
+      return Meteor.subscribe('t_leaks');
+    }
+  });
+  this.route('domains', {
+    path: '/domains',
+    waitOn: function(){
+      return Meteor.subscribe('t_domains');
+    }
+  });
+  this.route('companies', {
+    path: '/companies',
+    waitOn: function(){
+      return Meteor.subscribe('t_companies');
+    }
   });
   this.route('/dataentry/:_field', function() {
     if(this.params._field === "host"){
