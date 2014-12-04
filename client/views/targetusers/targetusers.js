@@ -20,7 +20,7 @@ Template.targetusers.helpers({
    */
 });
 
-Template.usersTableBody.entries = function(){
+Template.usersData.entries = function(){
   return TUsers.find();
 };
 

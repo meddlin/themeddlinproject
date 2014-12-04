@@ -12,7 +12,8 @@
 
 <template name="usersTableHeader">
 	<thead>
-		<tr><th>Username</th>
+		<tr>
+			<th>Username</th>
 		    <th>First | Last</th>
 		    <th>Email</th>
 		    <th>Region</th>
@@ -33,6 +34,7 @@
 
 <template name="usersTableBody">
 	<tbody>
+		{{> usersData}}
 		<!-- <tr>
 	      <td>kookyuser</td>
 	      <td>Jack Sparrow</td>
@@ -47,7 +49,24 @@
 	      <td>adsf0923m  sd</td>
 	      <th>YES</th>
 	    </tr> -->
-	    {{#each entries}}
+	    <!-- {{#each entries}}
+		<tr>
+			<td>{{this.username}}</td>
+			<td>{{this.fname}} {{this.lname}}</td>
+			<td>{{this.email}}</td>
+			<td>{{this.region}}</td>
+			<td>{{this.country}}</td>
+		</tr>
+		{{/each}} -->
+	</tbody>
+</template>
+
+<template name="usersTableRow">
+<!-- //TODO: the {{}} stuff goes here once we have something being pulled from the collection via JS -->
+</template>
+
+<template name="usersData">
+	{{#each entries}}
 		<tr>
 			<td>{{this.username}}</td>
 			<td>{{this.fname}} {{this.lname}}</td>
@@ -56,9 +75,4 @@
 			<td>{{this.country}}</td>
 		</tr>
 		{{/each}}
-	</tbody>
-</template>
-
-<template name="usersTableRow">
-<!-- //TODO: the {{}} stuff goes here once we have something being pulled from the collection via JS -->
 </template>
