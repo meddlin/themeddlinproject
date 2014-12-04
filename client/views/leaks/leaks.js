@@ -1,8 +1,8 @@
 
 /*****************************************************************************/
-/* Leaks: Event Handlers and Helpersss .js*/
+/* leaks: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-Template.Leaks.events({
+Template.leaks.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
@@ -11,7 +11,7 @@ Template.Leaks.events({
    */
 });
 
-Template.Leaks.helpers({
+Template.leaks.helpers({
   /*
    * Example:
    *  items: function () {
@@ -21,15 +21,15 @@ Template.Leaks.helpers({
 });
 
 /*****************************************************************************/
-/* Leaks: Lifecycle Hooks */
+/* leaks: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Leaks.created = function () {
+Template.leaks.created = function () {
 };
 
-Template.Leaks.rendered = function () {
+Template.leaks.rendered = function () {
 };
 
-Template.Leaks.destroyed = function () {
+Template.leaks.destroyed = function () {
 };
 
 
